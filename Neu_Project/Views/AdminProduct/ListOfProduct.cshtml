@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Product>
+@{
+    ViewBag.Title = "ListOfProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<div style="display:flex;justify-content:flex-end" class="buttondiv">
+    <a href="#" class="btn btn-outline-primary" style="width: 15%">New Product</a>
+</div>
+<br />
+<table class="table table-bordered" style="text-align:center">
+
+    <tr >
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    @foreach(var item in Model){
+
+    <tr>
+        <td>@item.ProductId</td>
+        <td>@item.Name</td>
+        <td>@item.Price</td>
+        <td>@item.Description</td>
+        <td> <a href="#" style="width:60%" class="btn btn-info">Update</a> </td>
+        <td> <a href="#" style="width: 60%" class="btn btn-danger">Delete</a> </td>
+    </tr>
+
+            }
+
+</table>
+
