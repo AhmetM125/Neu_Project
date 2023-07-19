@@ -5,13 +5,16 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 <br />
+
 <div style="display:flex;justify-content:flex-end" class="button">
+    <h4 style="margin-right:65%">Category List</h4>
     <a href="#" class="btn btn-outline-primary" style="width:15%">New Category</a>
+
 </div>
 <br />
 
 <table class="table table-bordered">
-
+    
     <tr>
 
         <th>Id</th>
@@ -28,8 +31,8 @@
         <td>@item.CategoryId</td>
         <td>@item.Description</td>
         <td>@item.Name</td>
-        <td><a class="btn btn-info" href="#">Update</a></td>
-        <td><a class="btn btn-danger" href="#">Delete</a></td>
+        <td><a class="btn btn-info" href="~/AdminCategory/UpdateCtgPage/@item.CategoryId">Update</a></td>
+        <td><a class="btn btn-danger" href="~/AdminCategory/DeleteCtg/@item.CategoryId">Delete</a></td>
 
     </tr>
         }

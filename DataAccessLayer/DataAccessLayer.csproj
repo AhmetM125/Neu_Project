@@ -64,6 +64,7 @@
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
     <Compile Include="EntityFramework\EfProductDal.cs" />
+    <Compile Include="EntityFramework\EfUserDal.cs" />
     <Compile Include="Migrations\202307160548581_mig1.cs" />
     <Compile Include="Migrations\202307160548581_mig1.designer.cs">
       <DependentUpon>202307160548581_mig1.cs</DependentUpon>
@@ -71,6 +72,14 @@
     <Compile Include="Migrations\202307161349175_mig2.cs" />
     <Compile Include="Migrations\202307161349175_mig2.designer.cs">
       <DependentUpon>202307161349175_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307180719392_UserStatus.cs" />
+    <Compile Include="Migrations\202307180719392_UserStatus.designer.cs">
+      <DependentUpon>202307180719392_UserStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307181846108_user-adminrole.cs" />
+    <Compile Include="Migrations\202307181846108_user-adminrole.designer.cs">
+      <DependentUpon>202307181846108_user-adminrole.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307161349175_mig2.resx">
       <DependentUpon>202307161349175_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307180719392_UserStatus.resx">
+      <DependentUpon>202307180719392_UserStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307181846108_user-adminrole.resx">
+      <DependentUpon>202307181846108_user-adminrole.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

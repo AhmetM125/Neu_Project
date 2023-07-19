@@ -16,10 +16,7 @@ namespace Neu_Project.Controllers
     {
 
 		readonly ProductManager pm = new ProductManager(new EfProductDal());
-        public ActionResult Index()
-        {
-            return View();
-        }
+        
 		public ActionResult ListOfProduct()
 		{
 			var productvalues = pm.GetAllBl();

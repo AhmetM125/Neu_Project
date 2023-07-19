@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using EntityLayer.Concrete;
+using Microsoft.Ajax.Utilities;
 
 namespace Neu_Project.Controllers
 {
@@ -20,9 +21,24 @@ namespace Neu_Project.Controllers
 			var CategoryValues = cm.GetAllBl();
 			return View(CategoryValues);
 		}
-       /*public ActionResult GetList()
+      public ActionResult DeleteCtg(int id)
         {
-			
-		}*/
+            var category = cm.GetById(id);
+            cm.CategoryDelete(category);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult UpdateCtgPage(int id)
+        {
+            var categoryvalue = cm.GetById(id);
+            return View(categoryvalue);
+        }
+        [HttpPost]
+        public ActionResult UpdateCategory(Category category)
+        {
+           cm.UpdateCategory(category);
+           return RedirectToAction("Index");
+            
+        }
     }
 }

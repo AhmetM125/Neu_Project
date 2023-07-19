@@ -1,7 +1,9 @@
 ﻿using BusinessLayer.Abstract;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.Concrete.Repositories;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete
@@ -27,14 +29,9 @@ namespace BusinessLayer.Concrete
 
 		public void ProductAddBl(Product p)
 		{
-			if (false)
-			{
-			}
-			else
-			{
 				_productdal.Insert(p);
 				/*repo.Insert(p);*/
-			}
+			
 		}
 	}
 }

@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.User
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Header</h2>
+            </div>
+            <form method="post" action="~/User/NewUser">
+                <div class="modal-body">
+
+                    <label for="">Name</label>
+                    <input class="form-control" name="Name" type="text" />
+                    @Html.ValidationMessageFor(x => x.Name)
+                    <br />
+                    <label>Email</label>
+                    <input class="form-control" name="Email" type="email" />
+                     @Html.ValidationMessageFor(x => x.Email)
+                    <label>Username </label>
+                    <input class="form-control" name="Username" type="text" />
+                      @Html.ValidationMessageFor(x => x.Username)
+                    <label>Password</label>
+                    <input class="form-control" name="Password" type="password" />
+                     @Html.ValidationMessageFor(x => x.Password)
+                    <input value="Active" style="visibility:hidden" />
+                    <br />
+                    <button style="" class="btn btn-lg btn-outline-info">Confirm</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

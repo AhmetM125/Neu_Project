@@ -19,8 +19,6 @@ namespace BusinessLayer.Concrete
 			_categoryDal = categoryDal;
 		}
 
-
-
 		public List<Category> GetAllBl()
 		{
 			return _categoryDal.List();
@@ -28,15 +26,22 @@ namespace BusinessLayer.Concrete
 
 		public void CategoryAddBl(Category p)
 		{
-			if (false)
-			{
-
-			}
-			else
-			{
 				_categoryDal.Insert(p);
-				/*repo.Insert(p);*/
-			}
+			
+		}	
+		public Category GetById(int id)
+		{
+			return _categoryDal.Get(x=>x.CategoryId== id);
+		}
+
+		public void CategoryDelete(Category category)
+		{
+			_categoryDal.Delete(category);
+		}
+
+		public void UpdateCategory(Category category)
+		{
+			_categoryDal.Update(category);
 		}
 	}
 }

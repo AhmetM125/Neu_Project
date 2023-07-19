@@ -15,3 +15,5 @@ C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\DataAccessLayer\obj\Debug\DataAcc
 C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig2.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UserStatus.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.useradminrole.resources

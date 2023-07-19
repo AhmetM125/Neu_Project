@@ -7,17 +7,25 @@
 <h2>AddProduct</h2>
 
 @using (Html.BeginForm("AddProduct", "AdminProduct", FormMethod.Post))
-    
-{ 
-    
-    <input type="text" name="Name" />
-    <br /> <br />
+
+{
+
+    @Html.TextBoxFor(x => x.Name)
+    <br />
+    <br />
+    @Html.ValidationMessageFor(x => x.Name)
+    <br />
     <input type="text" name="Description" />
-    <br /> <br />
+    @Html.ValidationMessageFor(x => x.Description)
+    <br />
+    <br />
     <input type="text" name="Quantity" />
-    <br /> <br />
+    @Html.ValidationMessageFor(x => x.Quantity)
+    <br />
+    <br />
     <input type="text" name="Price" />
-    <br /> <br />
+    <br />
+    <br />
     <input type="text" name="CategoryId" />
 
     <button>Confirm</button>

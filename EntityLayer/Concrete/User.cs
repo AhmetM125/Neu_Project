@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +21,12 @@ namespace EntityLayer.Concrete
 		public string Username { get; set; }
 		[Required, StringLength(50)]
 		public string Password { get; set; }
+
+		public string Status { get; set; }
+
+		
+		[Required]
+		public string AdminRole { set; get; }
 
     }
 }
