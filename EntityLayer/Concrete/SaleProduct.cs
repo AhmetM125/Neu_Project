@@ -7,7 +7,7 @@ namespace EntityLayer.Concrete
 	{
 		[Key]
 		public int SaleId { get; set; }
-		public Sale Sales { get; set; }
+		public virtual Sale Sales { get; set; }
 		
 		public String TransactionNo { get; set; }
 
@@ -20,7 +20,9 @@ namespace EntityLayer.Concrete
 
 		public DateTime SaleDate { get; set; }
 
+		public virtual User User { get; set; }
+        public int UserId { get; set; }
 
 
-	}
+    }
 }

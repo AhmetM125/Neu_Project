@@ -7,5 +7,6 @@ namespace BusinessLayer.Abstract
     public interface IProductSaleService : IRepository<SaleProduct>
     {
         List<SaleProduct> GetAllBl();
+        List<SaleProduct> GetList();
     }
 }

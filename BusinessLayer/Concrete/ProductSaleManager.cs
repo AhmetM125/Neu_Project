@@ -13,6 +13,14 @@ namespace BusinessLayer.Concrete
             return base.List();
         }
 
+        public List<SaleProduct> GetList(int id)
+        {
+            return base.List(x => x.User.Id == id);
+        }
 
+        public List<SaleProduct> GetList()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

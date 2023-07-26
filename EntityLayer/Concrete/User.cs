@@ -28,6 +28,8 @@ namespace EntityLayer.Concrete
         [Required]
         public string AdminRole { set; get; }
 
+        public ICollection<SaleProduct> saleProducts;
+
        /* public string FullName { get; set; }*/
 
 

@@ -2419,8 +2419,9 @@
     <Content Include="Views\AdminCategory\CreateCategory.cshtml" />
     <Content Include="Views\AdminProduct\_PartialProductAdd.cshtml" />
     <Content Include="Views\Sale\Index.cshtml" />
-    <Content Include="Views\Sale\SaleScreen.cshtml" />
     <Content Include="Views\AdminProduct\UpdateProduct.cshtml" />
+    <Content Include="Views\Sale\SaleScreen.cshtml" />
+    <Content Include="Views\Sale\_SalePopup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

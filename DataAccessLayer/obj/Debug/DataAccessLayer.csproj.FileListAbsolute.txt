@@ -38,3 +38,5 @@ C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\D
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleProduct_db.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.__updateSaleProduct.resources

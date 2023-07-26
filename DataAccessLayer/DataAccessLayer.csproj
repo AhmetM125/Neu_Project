@@ -77,6 +77,14 @@
     <Compile Include="Migrations\202307250713059_mm.designer.cs">
       <DependentUpon>202307250713059_mm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307261137124_SaleProduct_db.cs" />
+    <Compile Include="Migrations\202307261137124_SaleProduct_db.designer.cs">
+      <DependentUpon>202307261137124_SaleProduct_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307261141137___updateSaleProduct.cs" />
+    <Compile Include="Migrations\202307261141137___updateSaleProduct.designer.cs">
+      <DependentUpon>202307261141137___updateSaleProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,6 +116,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307250713059_mm.resx">
       <DependentUpon>202307250713059_mm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307261137124_SaleProduct_db.resx">
+      <DependentUpon>202307261137124_SaleProduct_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307261141137___updateSaleProduct.resx">
+      <DependentUpon>202307261141137___updateSaleProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

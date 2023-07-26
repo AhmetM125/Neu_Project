@@ -1,4 +1,6 @@
 ﻿using BusinessLayer;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 namespace Neu_Project.Controllers
 {
@@ -14,11 +16,22 @@ namespace Neu_Project.Controllers
         }
         public ActionResult SaleScreen()
         {
-            return View();
+            var SaleList = NEUComponent.Instance.ProductService.GetAllBl();
+            return View(SaleList);
         }
-        public  void AddItemToChart(int id,int quantity)
+        public PartialViewResult _SalePopup()
         {
            
+            List<SelectListItem> product = (from x in NEUComponent.Instance.ProductService.List()
+                                            select new SelectListItem
+                                            {
+                                                Text = x.Name,
+                                                Value = x.ProductId.ToString(),
+                                            }
+
+                                        ).ToList();
+            ViewBag.dgr = product;
+            return PartialView();
         }
     }
 }
