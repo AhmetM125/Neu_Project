@@ -1,44 +1,72 @@
-﻿using BusinessLayer.Concrete;
-using DataAccessLayer.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using EntityLayer.Concrete;
-using Microsoft.Ajax.Utilities;
+using BusinessLayer.ValidationRules;
+using FluentValidation.Results;
+using BusinessLayer;
 
 namespace Neu_Project.Controllers
 {
-    
     public class AdminCategoryController : Controller
     {
+
         // GET: AdminCategory
-      readonly  CategoryManager cm = new CategoryManager(new EfCategoryDal());
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index(string data)
         {
-			var CategoryValues = cm.GetAllBl();
-			return View(CategoryValues);
-		}
-      public ActionResult DeleteCtg(int id)
+            ViewBag.data = data;
+
+            var CategoryValues = NEUComponent.Instance.CategoryService.GetAllBl();
+            return View(CategoryValues);
+        }
+        public ActionResult DeleteCtg(int id)
         {
-            var category = cm.GetById(id);
-            cm.CategoryDelete(category);
+            Category c = NEUComponent.Instance.CategoryService.GetById(id);
+            NEUComponent.Instance.CategoryService.CategoryDelete(c);
             return RedirectToAction("Index");
         }
         [HttpGet]
         public ActionResult UpdateCtgPage(int id)
         {
-            var categoryvalue = cm.GetById(id);
+            var categoryvalue = NEUComponent.Instance.CategoryService.GetById(id);
             return View(categoryvalue);
         }
         [HttpPost]
         public ActionResult UpdateCategory(Category category)
         {
-           cm.UpdateCategory(category);
-           return RedirectToAction("Index");
-            
+            NEUComponent.Instance.CategoryService.UpdateCategory(category);
+            return RedirectToAction("Index");
+
         }
+        [HttpGet]
+        public ActionResult CreateCategory()
+        {
+
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateCategory(Category c)
+        {
+            CategoryValidator categoryValidator = new CategoryValidator();
+            ValidationResult results = categoryValidator.Validate(c);
+            if (results.IsValid)
+            {
+                NEUComponent.Instance.CategoryService.Insert(c);
+                return RedirectToAction("Index", "AdminCategory", new { data = "Success" });
+
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                    return RedirectToAction("Index", "AdminCategory", new { data = "Error" });
+
+            }
+          // return RedirectToAction("Index", "AdminCategory");
+
+        }
+
     }
 }

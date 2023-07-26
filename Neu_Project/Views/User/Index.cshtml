@@ -1,8 +1,8 @@
-﻿   
+﻿
 
 @using EntityLayer.Concrete
 @model  List<User>
- 
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -12,151 +12,114 @@
 
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
-    
-       
-            <!-- Content Header (Page header) -->
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>Users</h1>
-                        </div>
-                        
-                    </div>
-                </div><!-- /.container-fluid -->
-            </section>
-
-            <!-- Main content -->
-            <section class="content">
-
-                <!-- Default box -->
-
-                <div style="display:flex;justify-content:flex-end">
-                    <button  id="myButton" style="width:15%;margin-right:5px" class="btn  btn-outline-info" data-toggle="modal" data-target="#Modal1">
-                        New User
-                    </button>
-
-
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Users</h1>
                 </div>
-                @Html.Action("CreatePartialPopup","User")
 
-          
-                <br />
-                <div class="card card-solid">
-                    <div class="card-body pb-0">
-                        <div class="row d-flex align-items-stretch">
-                            @foreach (var item in Model)
-                            {
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+
+        <div style="display:flex;justify-content:flex-end">
+            <button id="myButton" style="width:15%;margin-right:5px" class="btn  btn-outline-info" data-toggle="modal" data-target="#Modal1">
+                New User
+            </button>
+
+
+        </div>
+        @Html.Action("CreatePartialPopup", "User")
+
+
+        <br />
+        <div class="card card-solid">
+            <div class="card-body pb-0">
+                <div class="row d-flex align-items-stretch">
+                    @foreach (var item in Model)
+                    {
 
 
 
 
-                                <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                                    <div class="card bg-light">
-                                        <div class="card-header text-muted border-bottom-0">
-                                            Software Engineer <br />
-                                            @item.Name.Substring(0, 1).ToUpper()@item.Name.Substring(1)
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    Software Engineer <br />
+                                    @item.Name.Substring(0, 1).ToUpper()@item.Name.Substring(1)
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead">
+                                                <b>
+                                                    @item.Name.Substring(0, 1).ToUpper()@item.Name.Substring(1)
+                                                    User
+                                                </b>
+                                            </h2>
+                                            @{
+                                                string About =
+
+                                                   "Web Developer / C# / ASP.NET";
+
+                                            }
+
+                                            <p class="text-muted text-sm"><b>About: </b> @About </p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: @item.Email </li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: @item.Email</li>
+                                                
+                                            </ul>
                                         </div>
-                                        <div class="card-body pt-0">
-                                            <div class="row">
-                                                <div class="col-7">
-                                                    <h2 class="lead">
-                                                        <b>
-                                                            @item.Name.Substring(0, 1).ToUpper()@item.Name.Substring(1)
-                                                            Pearson
-                                                        </b>
-                                                    </h2>
-                                                    @{
-                                                        string About =
-
-                                                           "Web Developer / C# / ASP.NET";
-
-                                                    }
-
-                                                    <p class="text-muted text-sm"><b>About: </b> @About </p>
-                                                    <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: @item.Email </li>
-                                                        <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: @item.Email</li>
-                                                        <li class="small"><span class="fa-li"></span> Status: @item.Status </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-5 text-center">
-                                                    <img src="~/AdminLTE-3.0.4/dist/img/user1-128x128.jpg" alt="" class="img-circle img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="text-right">
-                                                <a href="#" class="btn btn-sm  ">
-                                                    @Html.Raw(item.Status == "Active" ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")
-                                                </a>
-                                                <br />
-                                                <a href="~/User/ChangeStatus/@item.Id">
-                                                    @Html.Raw(item.Status == "Active" ? "<button class='btn btn-sm btn-danger'>Change Status</button>" : "<button class='btn btn-sm btn-success'>Change Status</button>")
-                                                </a>
-                                                <a href="#" class="btn btn-sm btn-primary">
-                                                    <i class="fas fa-user"></i> View Profile
-                                                </a>
-                                            </div>
+                                        <div class="col-5 text-center">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuoovVYEMl5PlyrnrmjPY_0bH_k0RaXYByiMVOWeEhWeG9wxWP2ozVw0Ab51hiQzxErpo&usqp=CAU" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
-                            }
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+
+                                        <a href="#" class="btn btn-sm">
+                                            @Html.Raw(item.Status == "Active" ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")
+                                        </a>
+                                        <br />
+                                        <a href="~/User/DeleteU" class="btn btn-sm btn-danger " style="margin-right:5px">
+                                            Delete
+                                        </a>
+                                        <a href="~/User/ChangeStatus/@item.Id">
+                                            @Html.Raw(item.Status == "Active" ? "<button class='btn btn-sm btn-danger'>Change Status</button>" : "<button class='btn btn-sm btn-success'>Change Status</button>")
+                                        </a>
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> View Profile
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- /.card-body -->
-
+                    }
                 </div>
-                <!-- /.card -->
+            </div>
+            <!-- /.card-body -->
 
-            </section>
-         
-        <!-- /.content-wrapper -->
+        </div>
+        <!-- /.card -->
 
-        
+    </section>
 
-       
+    <!-- /.content-wrapper -->
+
+
+
+
 </body>
 </html>
 
 
-@*<br />
-    <br />
-    <div style="display:flex; justify-content:flex-end  ">
-        <a href="#" style="width:100px" class="btn btn-outline-primary"> New User </a>
-
-    </div>
-    <br />
-
-    <table class="table table-bordered" style="text-align:center">
-        <tr>
-            <th>Name    </th>
-            <th>Gmail </th>
-            <th>Username </th>
-            <th>Password </th>
-            <th>Update</th>
-            <th>Delete</th>
-
-        </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-
-                <td> @item.Name </td>
-                <td> @item.Email</td>
-                <td> @item.Username </td>
-                <td> @item.Password </td>
-                <td> <a style="width:90%" href="#" class="btn btn-success">Update</a>  </td>
-                <td> <a style="width:90%" href="#" class="btn btn-danger">Update</a>  </td>
-
-
-
-
-
-            </tr>
-        }
-
-
-    </table>
-
-*@

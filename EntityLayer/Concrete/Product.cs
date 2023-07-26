@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,8 @@ namespace EntityLayer.Concrete
 	{
 		[Key]
         public int ProductId { get; set; }
-		[Required]
+		[Required(ErrorMessage ="Please enter a name")]
+
 		[StringLength(50)]
 		public string Name { get; set; }
 		[StringLength(100)]
@@ -19,10 +21,12 @@ namespace EntityLayer.Concrete
 		[Required]
         public int Quantity { get; set; }
 		[Required]
-        public float Price { get; set; }
-		[Required]
+		public float Price { get; set; }
+        //[Required]
+        
+		 [ForeignKey("Category")]
 		public int CategoryId { get; set; }
-		public Category Category { get; set; }
+		public virtual Category Category { get; set; }
 
     }
 }

@@ -1,37 +1,30 @@
 ﻿using BusinessLayer.Abstract;
-using BusinessLayer.ValidationRules;
-using DataAccessLayer.Concrete.Repositories;
-using DataAccessLayer.EntityFramework;
+using BusinessLayer.Repositories;
 using EntityLayer.Concrete;
-using FluentValidation.Results;
 using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete
 {
-	public class ProductManager : IProductService
-	{
-		//	private readonly GenericRepository<Product> repo = new GenericRepository<Product>();
+    public class ProductManager : Repository<Product>, IProductService
+    {
+        public List<Product> GetAllBl()
+        {
+            return base.List();
+        }
 
-		readonly	IProductDal _productdal;
+        public Product GetById(int id)
+        {
+            return base.Get(x => x.ProductId == id);
+        }
 
-		//Constructor
-		public ProductManager(IProductDal productdal)
-		{
-			_productdal = productdal;
-		}
+        public void ProductDelete(Product product)
+        {
+            base.Delete(product);
+        }
 
-		
-
-		public List<Product> GetAllBl()
-		{
-			return _productdal.List();
-		}
-
-		public void ProductAddBl(Product p)
-		{
-				_productdal.Insert(p);
-				/*repo.Insert(p);*/
-			
-		}
-	}
+        public void UpdateProduct(Product product)
+        {
+            base.Update(product);
+        }
+    }
 }

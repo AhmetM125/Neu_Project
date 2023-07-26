@@ -10,11 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccessLayer</RootNamespace>
     <AssemblyName>DataAccessLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,20 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\Context.cs" />
-    <Compile Include="Abstract\IBrandDal.cs" />
-    <Compile Include="Abstract\ICategoryDal.cs" />
-    <Compile Include="Abstract\ICustomerDal.cs" />
-    <Compile Include="Abstract\IUserDal.cs" />
-    <Compile Include="Abstract\IStockEntryDal.cs" />
-    <Compile Include="Abstract\ISaleProductDal.cs" />
-    <Compile Include="Abstract\ISaleDal.cs" />
-    <Compile Include="Abstract\IProductDal.cs" />
-    <Compile Include="Abstract\IRepository.cs" />
-    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
-    <Compile Include="EntityFramework\EfCategoryDal.cs" />
-    <Compile Include="EntityFramework\EfProductDal.cs" />
-    <Compile Include="EntityFramework\EfUserDal.cs" />
+    <Compile Include="Concrete\NEUContext.cs" />
     <Compile Include="Migrations\202307160548581_mig1.cs" />
     <Compile Include="Migrations\202307160548581_mig1.designer.cs">
       <DependentUpon>202307160548581_mig1.cs</DependentUpon>
@@ -80,6 +68,14 @@
     <Compile Include="Migrations\202307181846108_user-adminrole.cs" />
     <Compile Include="Migrations\202307181846108_user-adminrole.designer.cs">
       <DependentUpon>202307181846108_user-adminrole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307250711275_migupdate.cs" />
+    <Compile Include="Migrations\202307250711275_migupdate.designer.cs">
+      <DependentUpon>202307250711275_migupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307250713059_mm.cs" />
+    <Compile Include="Migrations\202307250713059_mm.designer.cs">
+      <DependentUpon>202307250713059_mm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307181846108_user-adminrole.resx">
       <DependentUpon>202307181846108_user-adminrole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307250711275_migupdate.resx">
+      <DependentUpon>202307250711275_migupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307250713059_mm.resx">
+      <DependentUpon>202307250713059_mm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

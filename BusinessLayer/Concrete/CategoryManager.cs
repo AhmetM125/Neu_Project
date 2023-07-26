@@ -1,47 +1,34 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Concrete.Repositories;
+using BusinessLayer.Repositories;
 using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-	public class CategoryManager : ICategoryService
-	{
-		readonly ICategoryDal _categoryDal;
+    public class CategoryManager : Repository<Category>, ICategoryService
+    {
+        public List<Category> GetAllBl()
+        {
+            return base.List();
+        }
 
-		//Constructor
-		public CategoryManager(ICategoryDal categoryDal)
-		{
-			_categoryDal = categoryDal;
-		}
+        public void CategoryAddBl(Category p)
+        {
+            base.Insert(p);
+        }
+        public Category GetById(int id)
+        {
+            return base.Get(x => x.CategoryId == id);
+        }
 
-		public List<Category> GetAllBl()
-		{
-			return _categoryDal.List();
-		}
+        public void CategoryDelete(Category category)
+        {
+            base.Delete(category);
+        }
 
-		public void CategoryAddBl(Category p)
-		{
-				_categoryDal.Insert(p);
-			
-		}	
-		public Category GetById(int id)
-		{
-			return _categoryDal.Get(x=>x.CategoryId== id);
-		}
-
-		public void CategoryDelete(Category category)
-		{
-			_categoryDal.Delete(category);
-		}
-
-		public void UpdateCategory(Category category)
-		{
-			_categoryDal.Update(category);
-		}
-	}
+        public void UpdateCategory(Category category)
+        {
+            base.Update(category);
+        }
+    }
 }

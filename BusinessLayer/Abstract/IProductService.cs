@@ -1,14 +1,15 @@
-﻿using EntityLayer.Concrete;
-using System;
+﻿using BusinessLayer.Repositories;
+using EntityLayer.Concrete;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-	public interface IProductService
-	{
-		List<Product> GetAllBl();
-	}
+    public interface IProductService : IRepository<Product>
+    {
+        List<Product> GetAllBl();
+        Product GetById(int id);
+        void ProductDelete(Product product);
+        void UpdateProduct(Product product);
+
+    }
 }

@@ -18,5 +18,6 @@ namespace EntityLayer.Concrete
 		public string Address { get; set; }
 		public string City { get; set; }
 
+		
     }
 }

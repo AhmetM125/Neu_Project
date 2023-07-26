@@ -1,0 +1,35 @@
+﻿@using EntityLayer.Concrete
+@model Category 
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<div style="width:300px;margin:auto auto">
+    <h2 style="text-align:center">New Category</h2>
+    <br /> <br />
+
+
+    @using (Html.BeginForm("CreateCategory", "AdminCategory", FormMethod.Post))
+    {
+        @Html.Label("Name")
+
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+        <hr />
+        @Html.Label("Description")
+
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+
+        <br /> <hr />
+        <div style="text-align:center">
+        <button class="btn btn-outline-primary" style="width:75%;justify-content:center">
+            Submit
+        </button>
+
+        </div>
+    }
+
+</div>

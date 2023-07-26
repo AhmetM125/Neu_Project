@@ -1,0 +1,54 @@
+﻿@model EntityLayer.Concrete.Product
+
+@{
+    ViewBag.Title = "UpdateProduct";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br /> <br />
+
+       <div style="width:40%;margin-left:5%">
+          
+           @using (Html.BeginForm("UpdateProduct", "AdminProduct", FormMethod.Post))
+           {
+              
+
+                 @Html.HiddenFor(x=>x.ProductId)
+             
+               <br />
+
+               @Html.Label("Product Name")
+               <br />
+               @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+               <br />
+               @Html.Label("Product Description")
+               <br />
+               @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+               <br />
+               @Html.Label("Product Quantity")
+               <br />
+               @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
+               <br />
+               @Html.Label("Product Price")
+               <br />
+               @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+               <br />
+               @Html.Label("Category Name")
+               <br />
+               
+              @Html.DropDownListFor(x=>x.Category.CategoryId,(List<SelectListItem>)ViewBag.dgr,new {@class="form-control"})
+               <br />
+
+               <div style="text-align:center">
+
+                   <button style="width:75%" class="btn btn-lg btn-outline-success">Confirm</button>
+
+               </div>
+
+           }
+
+
+
+
+
+       </div>
+

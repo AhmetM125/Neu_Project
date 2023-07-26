@@ -1,32 +1,25 @@
-﻿@model EntityLayer.Concrete.Category 
-@{
-    ViewBag.Title = "UpdateCtgPage";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-}
-
-<br />
-<h2>Update</h2>
-<br />
-<div style="display:flex;justify-content:flex-start;margin-left:5%" >
-
-@using(Html.BeginForm("UpdateCategory", "AdminCategory",FormMethod.Post))
-{
-    <div style="width:300px;margin:0 auto;">
-        @Html.Label("Category Id")
-        @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" })
-        <br />
-        @Html.Label("Category Name")
-        @Html.TextBoxFor(x => x.Name, new {@class="form-control"})
-        <br />
-        @Html.Label("Category Description")
-        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
-        <br />
-        <div style="text-align:center">
-        <button  style="width:60%" class="btn btn-primary">Update</button>
-            
-        </div>
-    </div>
-            }
-
+﻿@using EntityLayer.Concrete
+ @model List<Category>
+    @{ ViewBag.Title = "Index"; Layout = "~/Views/Shared/_AdminLayout.cshtml"; } 
+< br />
+<div style="display:flex;justify-content:flex-end" class="button">
+    <h4 style="margin-right:65%">Category List</h4> <a href="~/AdminCategory/CreateCategory" class="btn btn-outline-primary" style="width:15%">New Category</a>
 </div>
-
+<br />
+<h1>@ViewBag.data</h1>
+<table class="table table-bordered" style="text-align:center">
+    <tr>
+        <th>Description</th>
+        <th>Name</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </tr> @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Description</td>
+            <td>@item.Name</td>
+            <td><a class="btn btn-info" href="~/AdminCategory/UpdateCtgPage/@item.CategoryId">Update</a></td>
+            <td><a class="btn btn-danger" href="~/AdminCategory/DeleteCtg/@item.CategoryId">Delete</a></td>
+        </tr>
+    }
+</table>

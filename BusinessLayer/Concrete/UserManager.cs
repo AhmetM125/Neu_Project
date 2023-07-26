@@ -1,53 +1,42 @@
 ﻿using BusinessLayer.Abstract;
-using DataAccessLayer.Concrete.Repositories;
+using BusinessLayer.Repositories;
 using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-	public class UserManager : IUserService
-	{
-		readonly IUserDal _userdal;
+    public class UserManager : Repository<User>, IUserService
+    {
 
-		public UserManager(IUserDal userdal)
-		{
-			_userdal = userdal;
-		}
 
-		public User GetById(int id)
-		{
-			return _userdal.Get(x=> x.Id == id);
-		}
+        public User GetById(int id)
+        {
+            return base.Get(x => x.Id == id);
+        }
 
-		public List<User> GetListById(int id)
-		{
-			return _userdal.List(x=> x.Id == id);
-		}
+        public List<User> GetListById(int id)
+            => base.List(x => x.Id == id);
 
-		public List<User> GetUsers()
-		{
-			return _userdal.List();
-		}
 
-		public void UserAddBl(User user)
-		{
-			_userdal.Insert(user);
-		}
+        public List<User> GetUsers()
+            => base.List();
 
-		public void UserRemoveBl(User user)
-		{
-			
-			_userdal.Update(user);
-			
-		}
+        public User Login(string username, string password)
+        {
+            var user = base.Get(x => x.Username == username && x.Password == password);
+            return user;
+        }
 
-		public void UserUpdateBl(User user)
-		{
-			_userdal.Update(user);
-		}
-	}
+        public void UserAddBl(User user)
+            => base.Insert(user);
+
+
+        public void UserRemoveBl(User user)
+            => base.Update(user);
+
+
+        public void UserUpdateBl(User user)
+            => base.Update(user);
+
+    }
 }

@@ -10,14 +10,14 @@ namespace BusinessLayer.ValidationRules
 {
 	public class ProductValidator :AbstractValidator<Product>
 	{
-		public ProductValidator() 
-		{
-			RuleFor(x => x.Name).MinimumLength(1).WithMessage("asda");
-			RuleFor(x=>x.Description).NotEmpty().WithMessage("... Error");
-			RuleFor(x => x.Quantity).LessThan(0).WithMessage("... Error");
-			RuleFor(x => x.Price).LessThan(0).WithMessage("... Error"); RuleFor(x => x.Price).LessThan(0).WithMessage("... Error");
-			RuleFor(x => x.CategoryId).NotEmpty().WithMessage("... Error");
+		public ProductValidator()
+        {
+            RuleFor(x => x.Name).MinimumLength(1).WithMessage("Name cannot be less than 1 character");
+            RuleFor(x => x.Description).NotEmpty().WithMessage("Description cannot be empty");
+            RuleFor(x => x.Quantity).GreaterThanOrEqualTo(0).WithMessage("Quantity must be greater than equal to 0");
+            RuleFor(x => x.Price).GreaterThanOrEqualTo(0).WithMessage("Price must be greater than equal to 0"); 
+           /* RuleFor(x => x.CategoryId).NotEmpty().WithMessage("");*/
 
-		}
-	}
+        }
+    }
 }

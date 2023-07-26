@@ -1,0 +1,42 @@
+﻿@using EntityLayer.Concrete
+@model Product
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">New Product</h2>
+            </div>
+            <form method="post" action="~/AdminProduct/AddProduct">
+                <div class="modal-body">
+
+                    <label for="Name">Product Name</label>
+                    <br />
+                    @*<input class="form-control" name="Name" type="text" />*@
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+
+                    <br />
+                    <label>Product Description</label>
+                    @*<input class="form-control" name="Description" type="text" />*@
+                    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Description)
+                    <label>Product Quantity </label>
+                    @*<input class="form-control" name="Quantity" type="text" />*@
+                    @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Quantity)
+                    <label>Price</label>
+                    @*<input class="form-control" name="Price" type="text" />*@
+                    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.Price)
+                    <br />
+                    <label>Category Name</label>
+                    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+                    <br /> <br />
+                    <hr />
+                    <button style="width:100%" class="btn btn-lg btn-outline-info">Confirm</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

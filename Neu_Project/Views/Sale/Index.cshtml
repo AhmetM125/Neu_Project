@@ -1,0 +1,78 @@
+﻿@using EntityLayer.Concrete
+@model List<SaleProduct>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div style="display:flex">
+        <div class="flex-column" style="width:40%;margin-left:5%">
+
+
+            <br />
+            <div>
+                <button name="NewSaleBtn" class="btn btn-lg btn-outline-success" >
+                    <a style="text-decoration:none;color:black" href="~/Sale/SaleScreen">
+                    New Sale
+                        </a>
+                </button>
+
+            </div>
+      
+        </div>
+    <div style="display:inline-block">
+       
+       
+        <div>
+
+        </div>
+
+       
+    </div>
+
+
+</div>
+
+
+
+
+<div style="margin-top:3%" class="container text-center ">
+    <div class="row row-cols-5 colordiv" style="color: white;font-family:Arial">
+        <div style="background-color:cornflowerblue;margin:0 3% 0 5%" class="col">
+            <h5>Total Category</h5>
+            <br />
+            <p style="text-align:right">@ViewBag.CtgCount Item</p>
+        </div>
+        <div style="background-color:cadetblue; margin-right: 3%" class="col">
+            <h5>Total Product</h5>
+            <br />
+            <p style="text-align:right">@ViewBag.PrdCount Item</p>
+        </div>
+        <div style="background-color:coral; margin-right: 3%" class="col">
+            <h5>Total User</h5>
+            <br />
+            <p style="text-align:right">@ViewBag.UserCnt User</p>
+        </div>
+        <div style="background-color:mediumturquoise;margin-right:3%" class="col">
+            <h5>Total Sale</h5>
+            <br />
+            <p style="text-align:right">X Item</p>
+        </div>
+    </div>
+</div>
+
+@*<table class="table table-bordered" style="margin-top:4%">
+    <thead>
+        <tr style="text-align:center">
+            <th>Product Name</th>
+            <th>Category Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+
+     
+
+    </tbody>
+</table>*@
