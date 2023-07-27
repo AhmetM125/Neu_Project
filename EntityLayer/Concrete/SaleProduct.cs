@@ -10,7 +10,7 @@ namespace EntityLayer.Concrete
 		public virtual Sale Sales { get; set; }
 		
 		public String TransactionNo { get; set; }
-
+		
 		public int Quantity { get; set; }
 
         public float Price { get; set; }

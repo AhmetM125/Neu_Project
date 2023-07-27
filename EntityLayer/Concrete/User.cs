@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
@@ -30,8 +24,8 @@ namespace EntityLayer.Concrete
 
         public ICollection<SaleProduct> saleProducts;
 
-       /* public string FullName { get; set; }*/
-
+        /* public string FullName { get; set; }*/
+        public ICollection<SaleCart> SaleCarts { get; set; }
 
     }
 }

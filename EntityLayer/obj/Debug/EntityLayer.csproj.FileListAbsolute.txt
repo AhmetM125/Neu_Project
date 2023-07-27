@@ -6,7 +6,7 @@ C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\EntityLayer\obj\Debug\EntityLayer
 C:\Users\Ahmet\OneDrive\Masaüstü\Neu_Project\EntityLayer\obj\Debug\EntityLayer.pdb
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\bin\Debug\EntityLayer.dll
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\obj\Debug\EntityLayer.dll
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\obj\Debug\EntityLayer.pdb
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache

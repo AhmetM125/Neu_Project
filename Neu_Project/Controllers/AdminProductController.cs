@@ -36,6 +36,7 @@ namespace Neu_Project.Controllers
             }
             return View();
         }
+       
         public ActionResult DeleteProduct(int id)
         {
             Product p = NEUComponent.Instance.ProductService.GetById(id);

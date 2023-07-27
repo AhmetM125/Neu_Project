@@ -11,7 +11,7 @@ namespace BusinessLayer
         public IProductService ProductService => new ProductManager();
         public IProductSaleService ProductSaleService => new ProductSaleManager();
         public IUserService UserService => new UserManager();
-
+        public ISaleCart ChartService => new SaleCartManager();
         public static NEUComponent Instance
         {
             get

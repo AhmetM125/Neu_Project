@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Abstract\ICategoryService.cs" />
     <Compile Include="Abstract\ILoginService.cs" />
+    <Compile Include="Abstract\ISaleCart.cs" />
     <Compile Include="Abstract\IProductSaleService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Abstract\IProductService.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Concrete\CategoryManager.cs" />
     <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Concrete\ProductSaleManager.cs" />
+    <Compile Include="Concrete\SaleCartManager.cs" />
     <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="NEUComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

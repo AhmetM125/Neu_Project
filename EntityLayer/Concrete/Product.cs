@@ -27,6 +27,9 @@ namespace EntityLayer.Concrete
 		 [ForeignKey("Category")]
 		public int CategoryId { get; set; }
 		public virtual Category Category { get; set; }
+        //
+
+        public ICollection<SaleCart> saleCarts { get; set; }
 
     }
 }
