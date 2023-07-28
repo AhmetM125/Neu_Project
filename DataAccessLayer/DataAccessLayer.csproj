@@ -69,9 +69,13 @@
     <Compile Include="Migrations\202307270802195_quest1.designer.cs">
       <DependentUpon>202307270802195_quest1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202307270803033_m.cs" />
-    <Compile Include="Migrations\202307270803033_m.designer.cs">
-      <DependentUpon>202307270803033_m.cs</DependentUpon>
+    <Compile Include="Migrations\202307280516273_migStockEntry.cs" />
+    <Compile Include="Migrations\202307280516273_migStockEntry.designer.cs">
+      <DependentUpon>202307280516273_migStockEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307280840427_uptSaleCart.cs" />
+    <Compile Include="Migrations\202307280840427_uptSaleCart.designer.cs">
+      <DependentUpon>202307280840427_uptSaleCart.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,8 +103,11 @@
     <EmbeddedResource Include="Migrations\202307270802195_quest1.resx">
       <DependentUpon>202307270802195_quest1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307270803033_m.resx">
-      <DependentUpon>202307270803033_m.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307280516273_migStockEntry.resx">
+      <DependentUpon>202307280516273_migStockEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307280840427_uptSaleCart.resx">
+      <DependentUpon>202307280840427_uptSaleCart.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

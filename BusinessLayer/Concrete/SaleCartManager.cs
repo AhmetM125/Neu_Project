@@ -12,9 +12,24 @@ namespace BusinessLayer.Concrete
             throw new System.NotImplementedException();
         }
 
-        public List<SaleCart> GetAllBl()
+        public void ChartDelete(int Uid)
         {
-            return base.List();
+            base.DeleteW(x=>x.UserId==Uid);
+        }
+
+        public void CreateSale(SaleCart s)
+        {
+            base.Insert(s);
+        }
+
+        public void DeleteChartProduct(int Pid)
+        {
+            base.DeleteW(x => x.ProductId == Pid);
+        }
+
+        public List<SaleCart> GetAllBl(int U_Id)
+        {
+            return base.List(x => x.UserId == U_Id);
         }
 
         public SaleCart GetById(SaleCart saleCart)
@@ -40,5 +55,10 @@ namespace BusinessLayer.Concrete
 
 
         }
+
+       /* public float TotalPrice(int Uid)
+        {
+          
+        }*/
     }
 }

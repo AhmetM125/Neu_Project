@@ -13,13 +13,16 @@ namespace BusinessLayer.Repositories
         void Insert(T p1);
         List<T> List();
         void Delete(T p1);
-        void Delete(int id);
+
+        void DeleteW(Expression<Func<T, bool>> filter);
 
         T Get(Expression<Func<T, bool>> filter);
 
         void Update(T p1);
 
         List<T> List(Expression<Func<T, bool>> expression);
+
+        float GeneralSum();
 
 
     }

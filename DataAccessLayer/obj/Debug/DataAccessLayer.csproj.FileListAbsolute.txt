@@ -31,9 +31,10 @@ C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\D
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleChart.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.quest.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.quest1.resources
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.m.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migStockEntry.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.uptSaleCart.resources

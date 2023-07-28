@@ -1,27 +1,32 @@
 ﻿@using EntityLayer.Concrete
-@model SaleCart 
+@model SaleCart
 <div class="modal" id="Modal1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">New Product</h2>
             </div>
-            <form method="post" action="~/Sale/InsertToBasket">
-                <br />
-                
-                @Html.Label("Product Name") 
-                <br>
-                @Html.DropDownListFor(x => x.ProductId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control",style="margin-bottom:30px" })
-                
-                <br />
-                @Html.Label("Quantity")
-                @Html.TextBoxFor(x=>x.Quantity,new { @class = "form-control" })
-                <div class="modal-body">
+            <div >
 
-                    <button style="width:100%" class="btn btn-lg btn-outline-info">Confirm</button>
 
-                </div>
-            </form>
+                <form method="post" action="~/Sale/InsertToBasket">
+                    <br />
+
+                    @Html.Label("Product Name")
+                    <br>
+                    @Html.DropDownListFor(x => x.ProductId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", style = "margin-bottom:30px" })
+
+                    <br />
+                    @Html.Label("Quantity")
+                    
+                    @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
+                    <div class="modal-body">
+                        <hr />
+                        <button style="width:100%" class="btn btn-lg btn-outline-info">Confirm</button>
+
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

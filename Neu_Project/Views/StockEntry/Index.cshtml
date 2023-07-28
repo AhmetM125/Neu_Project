@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<div style="margin-left:10px;display:flex">
+    <div style="width:40%;margin-top:5%">
+        <h3>Stock Entry Page</h3>
+        <br />
+        <form method="post" href="#">
+            <label>Transaction Number</label>
+            <input type="text" class="form-control" />
+            <br />
+            <label>Product Name</label>
+            <input type="text" class="form-control" />
+            <label>Product Quantity</label>
+            <input type="text" class="form-control" />
+            <label>Product Price</label>
+            <input type="text" class="form-control" />
+            <br />
+            <input type="date" class="form-control" />
+            <br />
+            <hr />
+            <button class="btn btn-outline-info form-control">Confirm</button>
+        </form>
+    </div>
+    <div style="width:5%"></div>
+    <div style="width:55%">
+        <table class="table table-bordered" style="text-align:center">
+            <thead>
+                <tr>
+                    <th>Invoice Number</th>
+                    <th>Total Price</th>
+                    <th>Date</th>
+                    <th>Details </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                   <a class="btn btn-outline-info">Details</a>
+
+                </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+</div>
+

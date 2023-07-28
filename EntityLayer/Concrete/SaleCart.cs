@@ -13,11 +13,9 @@ namespace EntityLayer.Concrete
             public int Quantity { get; set; }
             
             public Nullable<float> Price { get; set; }
-        
-            public float? TotalPrice { get; set; }
-        
             //FK
 
+            public float TotalPrice { get; set; }
             public virtual Product Product { get; set; }
             public int ProductId { get; set; }
             //FK

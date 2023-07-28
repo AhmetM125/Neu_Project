@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Concrete
 {
-	public class StockEntry
+    public class StockEntry
 	{
-        public int StockEntryId { get; set; }
+        [Key]
+        public int InvoiceNumber { get; set; }
         public DateTime Date { get; set; }
+        public float TotalPrice { get; set; }
+
+
     }
 }

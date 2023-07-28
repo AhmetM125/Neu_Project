@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -11,7 +12,7 @@ namespace BusinessLayer.Repositories
     public class Repository<T> : IRepository<T> where T : class
     {
         private NEUContext _context = new NEUContext(NEUComponent.ConnectionString);
-
+        
 
         public void Delete(T p1)
         {
@@ -20,13 +21,13 @@ namespace BusinessLayer.Repositories
             _context.SaveChanges();
 
         }
-
-        public void Delete(int id)
+        public void DeleteW(Expression<Func<T, bool>> filter)
         {
-            var obj = _context.Set<T>().Find(id);
-            Delete(obj);
-        }
+            var Deleting = _context.Set<T>().Where(filter);
+            _context.Set<T>().RemoveRange(Deleting);
+            _context.SaveChanges();
 
+        }
         public T Get(Expression<Func<T, bool>> filter)
         {
             return _context.Set<T>().SingleOrDefault(filter);            //return only one value 
@@ -60,5 +61,18 @@ namespace BusinessLayer.Repositories
             return _context.Set<T>().Count();
         }
 
+        public float GeneralSum()
+        {
+            var s = _context.SaleCarts.Select(d => d.TotalPrice).Any();
+            return s == true ? _context.SaleCarts.Select(d => d.TotalPrice).Sum() : 0;
+           /* if (s) { 
+                return _context.SaleCarts.Select(d => d.TotalPrice).Sum();
+            }
+            else
+            {
+                return 0;
+            }*/
+
+        }
     }
 }
