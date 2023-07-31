@@ -11,18 +11,22 @@ namespace Neu_Project.Controllers
         // GET: User
         public ActionResult Index()
         {
-            var UserValues = NEUComponent.Instance.UserService.GetUsers();
+            var UserValues = NEUComponent.Instance.UserService.GetUsers(false);
             return View(UserValues);
         }
         public ActionResult ChangeStatus(int Id)
         {
             var Uservalue = NEUComponent.Instance.UserService.GetById(Id);
-            Uservalue.Status = Uservalue.Status == "Active" ? "Pasive" : "Active";
+            Uservalue.Status = Uservalue.Status == true ? false : false;
             NEUComponent.Instance.UserService.UserRemoveBl(Uservalue);
 
             return RedirectToAction("Index");
         }
-        
+        public ActionResult ShowAll()
+        {
+            var userValues = NEUComponent.Instance.UserService.GetUsers(true);
+            return View("Index", userValues);
+        }
         public ActionResult DeleteU(int Id)
         {
             var Uservalue = NEUComponent.Instance.UserService.GetById(Id);

@@ -1,0 +1,29 @@
+﻿@using EntityLayer.Concrete
+@model List<Sale>
+
+
+
+
+<table class="table table-bordered ">
+
+    <thead>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+            </tr>
+        }
+    </tbody>
+
+
+
+</table>

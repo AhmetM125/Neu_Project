@@ -1,15 +1,9 @@
-﻿using BusinessLayer;
-using DataAccessLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Web;
+﻿/*using System;
 using System.Web.Security;
 
 namespace Neu_Project.Roles
 {
-	public class AdminRoleProvider : RoleProvider
+    public class AdminRoleProvider : RoleProvider
 	{
 		public override string ApplicationName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
@@ -38,12 +32,12 @@ namespace Neu_Project.Roles
 			throw new NotImplementedException();
 		}
 
-		public override string[] GetRolesForUser(string username)
+		*//*public override string[] GetRolesForUser(string username)
 		{
-			var x = NEUComponent.Instance.UserService.Get(y=>y.Username == username);
-			return new string[] { x.AdminRole };
+			*//*var x = NEUComponent.Instance.UserService.Get(y=>y.Username == username);
+			return new string[] { x. };*//*
 		}
-
+*//*
 
 		public override string[] GetUsersInRole(string roleName)
 		{
@@ -65,4 +59,4 @@ namespace Neu_Project.Roles
 			throw new NotImplementedException();
 		}
 	}
-}
+}*/

@@ -4,12 +4,13 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IProductSaleService : IRepository<SaleProduct>
+    public interface IProductSaleService : IRepository<Sale>
     {
-        List<SaleProduct> GetAllBl();
-        List<SaleProduct> GetList();
+        List<Sale> GetAllBl();
+        List<Sale> GetList();
 
-        void ProductSaleInsert(SaleProduct product);
+        void ProductSaleInsert(Sale product);
         int GenerateTransactionNumber();
+        void PaymentProcess(Sale sale,int Uid);
     }
 }

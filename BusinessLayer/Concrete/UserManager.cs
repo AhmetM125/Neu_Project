@@ -18,14 +18,18 @@ namespace BusinessLayer.Concrete
             => base.List(x => x.Id == id);
 
 
-        public List<User> GetUsers()
-            => base.List();
-
-        public User Login(string username, string password)
+        public List<User> GetUsers(bool AllStatus)
         {
+
+            return AllStatus == true ? base.List() : base.List(x => x.Status == false);
+        }
+
+
+        public User Login(string username, string password) => base.Get(x => x.Username == username && x.Password == password);
+      /*  {
             var user = base.Get(x => x.Username == username && x.Password == password);
             return user;
-        }
+        }*/
 
         public void UserAddBl(User user)
             => base.Insert(user);

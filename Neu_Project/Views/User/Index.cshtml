@@ -36,10 +36,22 @@
 
 
         </div>
+
+        <div style="margin-left:3%">
+            <a class="btn btn-lg btn-warning" href="~/User/ShowAll" style="color:white">
+                Show All
+            </a>
+            <a class="btn btn-lg btn-success" href="~/User/Index">
+                Refresh
+            </a>
+        </div>
+        <br />
+
         @Html.Action("CreatePartialPopup", "User")
 
 
         <br />
+
         <div class="card card-solid">
             <div class="card-body pb-0">
                 <div class="row d-flex align-items-stretch">
@@ -75,7 +87,7 @@
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: @item.Email </li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: @item.Email</li>
-                                                
+
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
@@ -88,14 +100,11 @@
 
 
                                         <a href="#" class="btn btn-sm">
-                                            @Html.Raw(item.Status == "Active" ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")
+                                            @Html.Raw(item.Status == true ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")
                                         </a>
                                         <br />
-                                        <a href="~/User/DeleteU/@item.Id" class="btn btn-sm btn-danger " style="margin-right:5px">
-                                            Delete
-                                        </a>
                                         <a href="~/User/ChangeStatus/@item.Id">
-                                            @Html.Raw(item.Status == "Active" ? "<button class='btn btn-sm btn-danger'>Change Status</button>" : "<button class='btn btn-sm btn-success'>Change Status</button>")
+                                            @Html.Raw(item.Status == true ? "<button class='btn btn-sm btn-danger'>Change Status</button>" : "<button class='btn btn-sm btn-success'>Change Status</button>")
                                         </a>
                                         <a href="#" class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> View Profile

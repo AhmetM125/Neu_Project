@@ -27,17 +27,10 @@ C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\bin\D
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.first.resources
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleChart.resources
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.quest.resources
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.quest1.resources
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migStockEntry.resources
-C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.uptSaleCart.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\bin\Debug\DataAccessLayer.dll
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
@@ -62,3 +55,9 @@ C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\De
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ForSaleHistoryTable.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.nullTransactionNo.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.nullTransactionNo2.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.start.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.BrandDelete_SalesTable.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ChangesForStockEntry_User.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UpdateSalechart.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UpdateSaleTB.resources

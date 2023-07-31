@@ -70,7 +70,7 @@ namespace Neu_Project.Controllers
             return RedirectToAction("ListOfProduct");
         }
 
-        public PartialViewResult _PartialProductAdd()
+        public PartialViewResult PartialProductAdd()
         {
             List<SelectListItem> product = (from x in NEUComponent.Instance.CategoryService.List()
                                             select new SelectListItem

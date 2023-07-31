@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Neu_Project</RootNamespace>
     <AssemblyName>Neu_Project</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -133,6 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\SaleController.cs" />
     <Compile Include="Controllers\StockEntryController.cs" />
     <Compile Include="Roles\AdminRoleProvider.cs" />
@@ -2416,13 +2417,19 @@
     <Content Include="Views\ErrorPage\Page404.cshtml" />
     <Content Include="Views\Login\UserLogin.cshtml" />
     <Content Include="Views\AdminCategory\CreateCategory.cshtml" />
-    <Content Include="Views\AdminProduct\_PartialProductAdd.cshtml" />
+    <Content Include="Views\AdminProduct\PartialProductAdd.cshtml" />
     <Content Include="Views\Sale\Index.cshtml" />
     <Content Include="Views\AdminProduct\UpdateProduct.cshtml" />
     <Content Include="Views\Sale\SaleScreen.cshtml" />
-    <Content Include="Views\Sale\_SalePopup.cshtml" />
+    <Content Include="Views\Sale\SalePopup.cshtml" />
     <Content Include="Views\StockEntry\Index.cshtml" />
     <Content Include="Views\Sale\Prt_PaymentDetails.cshtml" />
+    <Content Include="Views\StockEntry\PList.cshtml" />
+    <Content Include="Views\StockEntry\ProductEntry.cshtml" />
+    <Content Include="Views\StockEntry\ChartList.cshtml" />
+    <Content Include="Views\StockEntry\ProductEntryP.cshtml" />
+    <Content Include="Views\Report\SaleList.cshtml" />
+    <Content Include="Views\Report\StockEntryList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

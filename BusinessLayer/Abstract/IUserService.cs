@@ -7,7 +7,8 @@ namespace BusinessLayer.Abstract
     public interface IUserService : IRepository<User>
     {
         User Login(string username, string password);
-        List<User> GetUsers();
+
+        List<User> GetUsers(bool AllStatus);
         void UserAddBl(User user);
         void UserRemoveBl(User user);
         void UserUpdateBl(User user);

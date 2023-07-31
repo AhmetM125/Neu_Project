@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Concrete
 {
-    public class SaleCartManager : Repository<EntityLayer.Concrete.SaleCart>, ISaleCart
+    public class SaleCartManager : Repository<SaleCart>, ISaleCart
     {
-        public void ChartDelete(EntityLayer.Concrete.SaleCart shoppingChart)
+        public void ChartDelete(SaleCart shoppingChart)
         {
             throw new System.NotImplementedException();
         }
@@ -43,14 +43,16 @@ namespace BusinessLayer.Concrete
         }
         public SaleCart SetProduct(Product p,int Uid)
         {
-            SaleCart s = new SaleCart();
-            s.ProductId = p.ProductId;
-            s.Quantity = p.Quantity;
-            s.Price = p.Price;
-            s.TotalPrice = p.Price * p.Quantity;
-            s.UserId = Uid;
+            SaleCart saleC = new SaleCart
+            {
+                ProductId = p.ProductId,
+                Quantity = p.Quantity,
+                Price = p.Price,
+                TotalPrice = p.Price * p.Quantity,
+                UserId = Uid
+            };
 
-            return s;
+            return saleC;
 
 
 

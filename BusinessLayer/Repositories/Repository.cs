@@ -11,8 +11,8 @@ namespace BusinessLayer.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private NEUContext _context = new NEUContext(NEUComponent.ConnectionString);
-        
+        private readonly NEUContext _context = new NEUContext(NEUComponent.ConnectionString);
+
 
         public void Delete(T p1)
         {
@@ -37,9 +37,7 @@ namespace BusinessLayer.Repositories
         {
             var addedEntity = _context.Entry(obj);
             addedEntity.State = EntityState.Added;
-            
-           // var result = _context.Set<T>().Add(obj);
-                _context.SaveChanges();
+            _context.SaveChanges();
         }
 
 
@@ -64,16 +62,8 @@ namespace BusinessLayer.Repositories
 
         public float GeneralSum()
         {
-            var s = _context.SaleCarts.Select(d => d.TotalPrice).Any();
-            return s == true ? _context.SaleCarts.Select(d => d.TotalPrice).Sum() : 0;
-           /* if (s) { 
-                return _context.SaleCarts.Select(d => d.TotalPrice).Sum();
-            }
-            else
-            {
-                return 0;
-            }*/
-
+            bool Summation = _context.SaleCarts.Select(d => d.TotalPrice).Any();
+            return Summation == true ? _context.SaleCarts.Select(d => d.TotalPrice).Sum() : 0;
         }
     }
 }

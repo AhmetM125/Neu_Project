@@ -54,7 +54,7 @@ namespace Neu_Project.Controllers
 			return RedirectToAction("SaleScreen", "Sale");
 		}
 
-		public PartialViewResult _SalePopup()
+		public PartialViewResult SalePopup()
 		{
 
 			List<SelectListItem> product = (from x in NEUComponent.Instance.ProductService.List()
@@ -73,7 +73,7 @@ namespace Neu_Project.Controllers
 		public PartialViewResult Prt_PaymentDetails()
 		{
 			int Uid = (int)Session["U_Id"];
-			List<SelectListItem> SaleCart = (from x in NEUComponent.Instance.UserService.GetUsers()
+			List<SelectListItem> SaleCart = (from x in NEUComponent.Instance.UserService.GetUsers(false)
 											 select new SelectListItem
 											 {
 												 Text = x.Name + " " + x.Username,
@@ -91,13 +91,9 @@ namespace Neu_Project.Controllers
 			return RedirectToAction("SaleScreen");
 		}
 		[HttpPost]
-		public ActionResult ConfirmPayment(SaleProduct s)
+		public ActionResult ConfirmPayment(Sale s)
 		{
-			s.SaleDate = DateTime.Today;
-			s.UserId = (int)Session["U_Id"];
-			s.TotalPrice = NEUComponent.Instance.ChartService.GeneralSum();
-			s.TransactionNo = NEUComponent.Instance.ProductSaleService.GenerateTransactionNumber();
-			s.User = NEUComponent.Instance.UserService.GetById(s.UserId);
+			NEUComponent.Instance.ProductSaleService.PaymentProcess(s,(int)Session["U_Id"]);
 			NEUComponent.Instance.ProductSaleService.ProductSaleInsert(s);
 			return RedirectToAction("Index", "AdminCategory", new { data = "Success" });
 		}

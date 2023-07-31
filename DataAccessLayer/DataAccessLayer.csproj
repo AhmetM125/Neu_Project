@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccessLayer</RootNamespace>
     <AssemblyName>DataAccessLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -53,41 +53,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\NEUContext.cs" />
-    <Compile Include="Migrations\202307270756208_first.cs" />
-    <Compile Include="Migrations\202307270756208_first.designer.cs">
-      <DependentUpon>202307270756208_first.cs</DependentUpon>
+    <Compile Include="Migrations\202307311201576_start.cs" />
+    <Compile Include="Migrations\202307311201576_start.designer.cs">
+      <DependentUpon>202307311201576_start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202307270757213_SaleChart.cs" />
-    <Compile Include="Migrations\202307270757213_SaleChart.designer.cs">
-      <DependentUpon>202307270757213_SaleChart.cs</DependentUpon>
+    <Compile Include="Migrations\202307311206113_BrandDelete_SalesTable.cs" />
+    <Compile Include="Migrations\202307311206113_BrandDelete_SalesTable.designer.cs">
+      <DependentUpon>202307311206113_BrandDelete_SalesTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202307270800233_quest.cs" />
-    <Compile Include="Migrations\202307270800233_quest.designer.cs">
-      <DependentUpon>202307270800233_quest.cs</DependentUpon>
+    <Compile Include="Migrations\202307311213520_ChangesForStockEntry_User.cs" />
+    <Compile Include="Migrations\202307311213520_ChangesForStockEntry_User.designer.cs">
+      <DependentUpon>202307311213520_ChangesForStockEntry_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202307270802195_quest1.cs" />
-    <Compile Include="Migrations\202307270802195_quest1.designer.cs">
-      <DependentUpon>202307270802195_quest1.cs</DependentUpon>
+    <Compile Include="Migrations\202307311308022_UpdateSalechart.cs" />
+    <Compile Include="Migrations\202307311308022_UpdateSalechart.designer.cs">
+      <DependentUpon>202307311308022_UpdateSalechart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202307280516273_migStockEntry.cs" />
-    <Compile Include="Migrations\202307280516273_migStockEntry.designer.cs">
-      <DependentUpon>202307280516273_migStockEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307280840427_uptSaleCart.cs" />
-    <Compile Include="Migrations\202307280840427_uptSaleCart.designer.cs">
-      <DependentUpon>202307280840427_uptSaleCart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307291236538_ForSaleHistoryTable.cs" />
-    <Compile Include="Migrations\202307291236538_ForSaleHistoryTable.designer.cs">
-      <DependentUpon>202307291236538_ForSaleHistoryTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307291301292_nullTransactionNo.cs" />
-    <Compile Include="Migrations\202307291301292_nullTransactionNo.designer.cs">
-      <DependentUpon>202307291301292_nullTransactionNo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307291302378_nullTransactionNo2.cs" />
-    <Compile Include="Migrations\202307291302378_nullTransactionNo2.designer.cs">
-      <DependentUpon>202307291302378_nullTransactionNo2.cs</DependentUpon>
+    <Compile Include="Migrations\202307311312199_UpdateSaleTB.cs" />
+    <Compile Include="Migrations\202307311312199_UpdateSaleTB.designer.cs">
+      <DependentUpon>202307311312199_UpdateSaleTB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,32 +87,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202307270756208_first.resx">
-      <DependentUpon>202307270756208_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307311201576_start.resx">
+      <DependentUpon>202307311201576_start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307270757213_SaleChart.resx">
-      <DependentUpon>202307270757213_SaleChart.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307311206113_BrandDelete_SalesTable.resx">
+      <DependentUpon>202307311206113_BrandDelete_SalesTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307270800233_quest.resx">
-      <DependentUpon>202307270800233_quest.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307311213520_ChangesForStockEntry_User.resx">
+      <DependentUpon>202307311213520_ChangesForStockEntry_User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307270802195_quest1.resx">
-      <DependentUpon>202307270802195_quest1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307311308022_UpdateSalechart.resx">
+      <DependentUpon>202307311308022_UpdateSalechart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307280516273_migStockEntry.resx">
-      <DependentUpon>202307280516273_migStockEntry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307280840427_uptSaleCart.resx">
-      <DependentUpon>202307280840427_uptSaleCart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307291236538_ForSaleHistoryTable.resx">
-      <DependentUpon>202307291236538_ForSaleHistoryTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307291301292_nullTransactionNo.resx">
-      <DependentUpon>202307291301292_nullTransactionNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307291302378_nullTransactionNo2.resx">
-      <DependentUpon>202307291302378_nullTransactionNo2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307311312199_UpdateSaleTB.resx">
+      <DependentUpon>202307311312199_UpdateSaleTB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
