@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EntityLayer</RootNamespace>
     <AssemblyName>EntityLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -49,7 +49,6 @@
     <Compile Include="Concrete\Product.cs" />
     <Compile Include="Concrete\SaleCart.cs" />
     <Compile Include="Concrete\SaleProduct.cs" />
-    <Compile Include="Concrete\Sale.cs" />
     <Compile Include="Concrete\StockEntry.cs" />
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

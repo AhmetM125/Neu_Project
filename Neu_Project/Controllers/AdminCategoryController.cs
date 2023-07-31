@@ -1,12 +1,12 @@
-﻿using System.Web.Mvc;
-using EntityLayer.Concrete;
+﻿using BusinessLayer;
 using BusinessLayer.ValidationRules;
+using EntityLayer.Concrete;
 using FluentValidation.Results;
-using BusinessLayer;
+using System.Web.Mvc;
 
 namespace Neu_Project.Controllers
 {
-    public class AdminCategoryController : Controller
+	public class AdminCategoryController : Controller
     {
 
         // GET: AdminCategory
@@ -29,6 +29,7 @@ namespace Neu_Project.Controllers
         {
             var categoryvalue = NEUComponent.Instance.CategoryService.GetById(id);
             return View(categoryvalue);
+            
         }
         [HttpPost]
         public ActionResult UpdateCategory(Category category)

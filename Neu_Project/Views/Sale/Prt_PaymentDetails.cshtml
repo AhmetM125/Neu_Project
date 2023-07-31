@@ -25,19 +25,21 @@
         <div class="row">
             <div class="col-md-6">
                 <label class="credit-card-label">Date</label>
-                <input type="datetime-local" class="form-control credit-inputs" placeholder="12/24">
+                <input name="SaleDate" type="date" class="form-control credit-inputs" placeholder="12/24">
             </div>
             <div class="col-md-6">
                 <label class="credit-card-label">Remain</label>
                 <input type="text" class="form-control credit-inputs" placeholder="$0.0">
             </div>
         </div>
-        <hr class="line">
-
-      @ViewData["TotalPrice"]
-        <button class="btn btn-danger btn-block d-flex justify-content-between mt-3"> Confirm Payment</button>
-
         
+        <hr class="line">
+        <button class="btn btn-danger btn-block d-flex justify-content-between mt-3">
+                @ViewData["TotalPrice"]$
+            Confirm Payment
+        </button>
+
+
     }
 
 

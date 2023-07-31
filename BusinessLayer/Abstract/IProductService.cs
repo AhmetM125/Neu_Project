@@ -10,6 +10,7 @@ namespace BusinessLayer.Abstract
         Product GetById(int id);
         void ProductDelete(Product product);
         void UpdateProduct(Product product);
+        void ChangeCategoryNameOfProduct(Product product);
 
-    }
+	}
 }

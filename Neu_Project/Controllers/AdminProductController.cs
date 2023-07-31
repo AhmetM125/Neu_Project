@@ -40,7 +40,8 @@ namespace Neu_Project.Controllers
         public ActionResult DeleteProduct(int id)
         {
             Product p = NEUComponent.Instance.ProductService.GetById(id);
-            NEUComponent.Instance.ProductService.ProductDelete(p);
+            NEUComponent.Instance.ProductService.ChangeCategoryNameOfProduct(p);    
+           // NEUComponent.Instance.ProductService.ProductDelete(p);
             return RedirectToAction("ListOfProduct");
         }
 

@@ -14,7 +14,7 @@ namespace BusinessLayer.Abstract
         void ChartDelete(int Uid);
         void InsertChart(SaleCart saleCart);
         SaleCart GetById(SaleCart saleCart);
-        SaleCart SetProduct(Product p);
+        SaleCart SetProduct(Product p,int Uid);
 
         void DeleteChartProduct(int Pid);
         void CreateSale(SaleCart s);

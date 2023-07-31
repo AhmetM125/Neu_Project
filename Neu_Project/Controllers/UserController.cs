@@ -22,11 +22,13 @@ namespace Neu_Project.Controllers
 
             return RedirectToAction("Index");
         }
-        /*  [HttpGet]
-          public ActionResult NewUser()
-          {
-
-          }*/
+        
+        public ActionResult DeleteU(int Id)
+        {
+            var Uservalue = NEUComponent.Instance.UserService.GetById(Id);
+            NEUComponent.Instance.UserService.UserRemoveBl(Uservalue);
+            return RedirectToAction("Index","User");    
+        }
         [HttpPost]
         public ActionResult NewUser(User u)
         {

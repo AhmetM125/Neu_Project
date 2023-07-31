@@ -41,14 +41,14 @@ namespace BusinessLayer.Concrete
         {
              base.Insert(saleCart);
         }
-        public SaleCart SetProduct(Product p)
+        public SaleCart SetProduct(Product p,int Uid)
         {
             SaleCart s = new SaleCart();
             s.ProductId = p.ProductId;
             s.Quantity = p.Quantity;
             s.Price = p.Price;
             s.TotalPrice = p.Price * p.Quantity;
-            s.UserId = 1;
+            s.UserId = Uid;
 
             return s;
 
@@ -56,9 +56,6 @@ namespace BusinessLayer.Concrete
 
         }
 
-       /* public float TotalPrice(int Uid)
-        {
-          
-        }*/
+       
     }
 }

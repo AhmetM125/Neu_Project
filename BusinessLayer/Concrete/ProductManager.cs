@@ -7,6 +7,11 @@ namespace BusinessLayer.Concrete
 {
     public class ProductManager : Repository<Product>, IProductService
     {
+        public  void ChangeCategoryNameOfProduct(Product product)
+        {
+            product.CategoryId = 4;
+            base.Update(product);
+        }
         public List<Product> GetAllBl()
         {
             return base.List();

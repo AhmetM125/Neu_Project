@@ -91,7 +91,7 @@
                                             @Html.Raw(item.Status == "Active" ? "<span class='badge badge-success'>Aktif</span>" : "<span class='badge badge-danger'>Pasif</span>")
                                         </a>
                                         <br />
-                                        <a href="~/User/DeleteU" class="btn btn-sm btn-danger " style="margin-right:5px">
+                                        <a href="~/User/DeleteU/@item.Id" class="btn btn-sm btn-danger " style="margin-right:5px">
                                             Delete
                                         </a>
                                         <a href="~/User/ChangeStatus/@item.Id">

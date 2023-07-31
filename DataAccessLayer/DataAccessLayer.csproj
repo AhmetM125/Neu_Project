@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccessLayer</RootNamespace>
     <AssemblyName>DataAccessLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -77,6 +77,18 @@
     <Compile Include="Migrations\202307280840427_uptSaleCart.designer.cs">
       <DependentUpon>202307280840427_uptSaleCart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307291236538_ForSaleHistoryTable.cs" />
+    <Compile Include="Migrations\202307291236538_ForSaleHistoryTable.designer.cs">
+      <DependentUpon>202307291236538_ForSaleHistoryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307291301292_nullTransactionNo.cs" />
+    <Compile Include="Migrations\202307291301292_nullTransactionNo.designer.cs">
+      <DependentUpon>202307291301292_nullTransactionNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307291302378_nullTransactionNo2.cs" />
+    <Compile Include="Migrations\202307291302378_nullTransactionNo2.designer.cs">
+      <DependentUpon>202307291302378_nullTransactionNo2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,6 +120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307280840427_uptSaleCart.resx">
       <DependentUpon>202307280840427_uptSaleCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307291236538_ForSaleHistoryTable.resx">
+      <DependentUpon>202307291236538_ForSaleHistoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307291301292_nullTransactionNo.resx">
+      <DependentUpon>202307291301292_nullTransactionNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307291302378_nullTransactionNo2.resx">
+      <DependentUpon>202307291302378_nullTransactionNo2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,18 +1,14 @@
 ﻿using BusinessLayer;
 using EntityLayer.Concrete;
-using Neu_Project.Utility;
 using System.Web.Mvc;
 using System.Web.Security;
 
 namespace Neu_Project.Controllers
 {
-    [AllowAnonymous]
+	[AllowAnonymous]
     public class LoginController : Controller
     {
-
-
         [HttpGet]
-
         public ActionResult UserLogin()
         {         
             return View();

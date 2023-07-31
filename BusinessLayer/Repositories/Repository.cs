@@ -37,6 +37,7 @@ namespace BusinessLayer.Repositories
         {
             var addedEntity = _context.Entry(obj);
             addedEntity.State = EntityState.Added;
+            
            // var result = _context.Set<T>().Add(obj);
                 _context.SaveChanges();
         }

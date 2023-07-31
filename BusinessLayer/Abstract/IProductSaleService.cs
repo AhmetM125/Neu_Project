@@ -8,5 +8,8 @@ namespace BusinessLayer.Abstract
     {
         List<SaleProduct> GetAllBl();
         List<SaleProduct> GetList();
+
+        void ProductSaleInsert(SaleProduct product);
+        int GenerateTransactionNumber();
     }
 }
