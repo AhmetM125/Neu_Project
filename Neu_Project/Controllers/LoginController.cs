@@ -22,7 +22,7 @@ namespace Neu_Project.Controllers
             {
                 /*userinfo.Password = string.Empty;*/
                 FormsAuthentication.SetAuthCookie(userinfo.Username, false);
-                Session["U_Id"] = userinfo.Id;
+                Session["U_Id"] = userinfo.UserId;
                 return RedirectToAction("Index", "AdminCategory");
 
             }

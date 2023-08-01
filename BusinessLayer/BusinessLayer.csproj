@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BusinessLayer</RootNamespace>
     <AssemblyName>BusinessLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -66,10 +66,12 @@
     <Compile Include="Abstract\ISaleCart.cs" />
     <Compile Include="Abstract\IProductSaleService.cs" />
     <Compile Include="Abstract\IStockEntry.cs" />
+    <Compile Include="Abstract\IStockEntryChart.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="Abstract\IProductService.cs" />
     <Compile Include="Abstract\IStatisticsService.cs" />
     <Compile Include="Concrete\CategoryManager.cs" />
+    <Compile Include="Concrete\EntryChartManager.cs" />
     <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Concrete\ProductSaleManager.cs" />
     <Compile Include="Concrete\SaleCartManager.cs" />

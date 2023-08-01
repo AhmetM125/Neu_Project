@@ -1,34 +1,27 @@
-﻿@model EntityLayer.Concrete.StockEntry
-
+﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ProductEntry";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h2>Product Entry</h2>
 <br />
-<a href="~/StockEntry" class="btn btn-outline-info">Product Entry Page</a>
-<a href="~/StockEntry/PList" class="btn btn-outline-info">Stock Entry List</a>
-<a href="~/StockEntry/Index" class="btn btn-outline-primary">Stock Entry Page(Rmv)</a>
-@using (Html.BeginForm("ConfirmEntry", "StockEntry", FormMethod.Post))
-{
-<div style="margin-left:10px;display:flex">
-    <div style="width:40%;margin-top:5%">
-        <h3>Stock Entry Page</h3>
-        <br />
+<div style="display:flex;justify-content:left">
+    <div style="width:40%">
 
-
-        <label>Transaction Number</label>
-        <input name="InvoiceNumber" type="text" class="form-control" />
-        <br />
-        <label>Total Price</label>
-        <input name="TotalPrice" type="text" class="form-control" />
-        <br />
-        <input name="Date" type="date" class="form-control" />
-        <br />
-        <hr />
-        <button class="btn btn-outline-info form-control">Confirm</button>
+        @Html.Action("ProductEntryP", "StockEntry")
 
     </div>
-</div>}
-       
-        @* @Html.Action("PList", "StockEntry")*@
+
+    <div style="width:60%;margin-left:10px">
+        <div style="text-align:right">
+            <img src="https://pngimg.com/d/shopping_cart_PNG17.png" alt="Shopping cart PNG transparent image download, size: 600x568px" style="width:100px;height:80px" />
+
+        </div>
+       <br>
+        @Html.Action("ChartList", "StockEntry")
+
+    </div>
+
+
+</div> 

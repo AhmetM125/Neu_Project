@@ -12,8 +12,6 @@ namespace BusinessLayer.Repositories
     public class Repository<T> : IRepository<T> where T : class
     {
         private readonly NEUContext _context = new NEUContext(NEUComponent.ConnectionString);
-
-
         public void Delete(T p1)
         {
             var deletedEntity = _context.Entry(p1);
@@ -30,7 +28,8 @@ namespace BusinessLayer.Repositories
         }
         public T Get(Expression<Func<T, bool>> filter)
         {
-            return _context.Set<T>().SingleOrDefault(filter);            //return only one value 
+            return _context.Set<T>().SingleOrDefault(filter);           
+           //return only one value 
         }
 
         public void Insert(T obj)

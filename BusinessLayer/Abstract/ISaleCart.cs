@@ -13,8 +13,9 @@ namespace BusinessLayer.Abstract
         List<SaleCart> GetAllBl(int U_Id);
         void ChartDelete(int Uid);
         void InsertChart(SaleCart saleCart);
-        SaleCart GetById(SaleCart saleCart);
-        SaleCart SetProduct(Product p,int Uid);
+        SaleCart GetChartById(int Uid);
+
+		SaleCart SetProduct(Product p,int Uid);
 
         void DeleteChartProduct(int Pid);
         void CreateSale(SaleCart s);

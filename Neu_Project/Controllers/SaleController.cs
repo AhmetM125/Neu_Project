@@ -73,11 +73,11 @@ namespace Neu_Project.Controllers
 		public PartialViewResult Prt_PaymentDetails()
 		{
 			int Uid = (int)Session["U_Id"];
-			List<SelectListItem> SaleCart = (from x in NEUComponent.Instance.UserService.GetUsers(false)
+			List<SelectListItem> SaleCart = (from x in NEUComponent.Instance.UserService.GetUsers(true)
 											 select new SelectListItem
 											 {
 												 Text = x.Name + " " + x.Username,
-												 Value = x.Id.ToString(),
+												 Value = x.UserId.ToString(),
 											 }).ToList();
 			ViewBag.PaymentNS = SaleCart;
 

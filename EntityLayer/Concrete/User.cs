@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Concrete
@@ -8,7 +9,7 @@ namespace EntityLayer.Concrete
         
 
         [Key]
-        public int Id { get; set; }
+        public int UserId { get; set; }
 
         [Required,StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 5)]
         public string Name { get; set; }
@@ -26,9 +27,9 @@ namespace EntityLayer.Concrete
        
         public bool Status { get; set; }
 
-        
 
-        public ICollection<Sale> Sales;
+
+		public ICollection<Sale> Sales;
         public ICollection<SaleCart> SaleCarts { get; set; }
         public ICollection<StockEntry> StockEntries { get; set; }
 

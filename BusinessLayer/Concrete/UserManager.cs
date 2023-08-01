@@ -11,17 +11,17 @@ namespace BusinessLayer.Concrete
 
         public User GetById(int id)
         {
-            return base.Get(x => x.Id == id);
+            return base.Get(x => x.UserId == id);
         }
 
         public List<User> GetListById(int id)
-            => base.List(x => x.Id == id);
+            => base.List(x => x.UserId == id);
 
 
         public List<User> GetUsers(bool AllStatus)
         {
 
-            return AllStatus == true ? base.List() : base.List(x => x.Status == false);
+            return AllStatus == true ? base.List() : base.List(x => x.Status == true);
         }
 
 
@@ -32,7 +32,10 @@ namespace BusinessLayer.Concrete
         }*/
 
         public void UserAddBl(User user)
-            => base.Insert(user);
+        {
+            user.Status = true;
+            base.Insert(user);
+        }
 
 
         public void UserRemoveBl(User user)

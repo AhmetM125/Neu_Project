@@ -17,7 +17,7 @@ namespace Neu_Project.Controllers
         public ActionResult ChangeStatus(int Id)
         {
             var Uservalue = NEUComponent.Instance.UserService.GetById(Id);
-            Uservalue.Status = Uservalue.Status == true ? false : false;
+            Uservalue.Status = Uservalue.Status == true ? false : true;
             NEUComponent.Instance.UserService.UserRemoveBl(Uservalue);
 
             return RedirectToAction("Index");
@@ -58,5 +58,10 @@ namespace Neu_Project.Controllers
 
             return PartialView();
         }
-    }
+        public PartialViewResult UserVPartial()
+        {
+            return PartialView();
+        }
+
+	}
 }

@@ -1,27 +1,29 @@
-﻿@using EntityLayer.Concrete
-@model List<Product>
+﻿
+
+@using EntityLayer.Concrete
+@model List<EntryCart>
 <table class="table table-bordered">
     <thead>
-        <tr style="text-align:center">
+        <tr>
             <th>Product Name</th>
             <th>Quantity</th>
             <th>Price</th>
         </tr>
     </thead>
     <tbody>
-    @*    @foreach (var item in Model)
+        @foreach (var item in Model)
         {
             <tr>
-                <td>@item. </td>
-
+                <td>@item.ProductId</td>
             </tr>
-        }*@
+        }
     </tbody>
 </table>
 
 
 <br />
-<div >
+<div>
     <button class="btn btn-primary form-control">Total: 0.0$ Confirm</button>
 
 </div>
+

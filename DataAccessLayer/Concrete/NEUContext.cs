@@ -19,8 +19,10 @@ namespace DataAccessLayer.Concrete
 		public DbSet<User> Users { get; set; }
 
 		public DbSet<SaleCart> SaleCarts { get; set; }
+		public DbSet<EntryCart> EntryCarts { get; set; }
 
 		
+
 
 
 	}

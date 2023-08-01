@@ -21,8 +21,9 @@ namespace BusinessLayer.Concrete
         {
             base.Insert(s);
         }
+		public SaleCart GetChartById(int Uid) => base.Get(x => x.UserId == Uid);
 
-        public void DeleteChartProduct(int Pid)
+		public void DeleteChartProduct(int Pid)
         {
             base.DeleteW(x => x.ProductId == Pid);
         }

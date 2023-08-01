@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Neu_Project</RootNamespace>
     <AssemblyName>Neu_Project</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -2422,14 +2422,14 @@
     <Content Include="Views\AdminProduct\UpdateProduct.cshtml" />
     <Content Include="Views\Sale\SaleScreen.cshtml" />
     <Content Include="Views\Sale\SalePopup.cshtml" />
-    <Content Include="Views\StockEntry\Index.cshtml" />
+    <Content Include="Views\StockEntry\TransactionEntry.cshtml" />
     <Content Include="Views\Sale\Prt_PaymentDetails.cshtml" />
     <Content Include="Views\StockEntry\PList.cshtml" />
-    <Content Include="Views\StockEntry\ProductEntry.cshtml" />
-    <Content Include="Views\StockEntry\ChartList.cshtml" />
+    <Content Include="Views\StockEntry\Index.cshtml" />
     <Content Include="Views\StockEntry\ProductEntryP.cshtml" />
     <Content Include="Views\Report\SaleList.cshtml" />
     <Content Include="Views\Report\StockEntryList.cshtml" />
+    <Content Include="Views\StockEntry\ChartList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

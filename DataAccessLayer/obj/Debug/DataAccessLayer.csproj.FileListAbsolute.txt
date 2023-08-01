@@ -41,23 +41,23 @@ C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\bin\De
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.first.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleChart.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.quest.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.quest1.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.migStockEntry.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.uptSaleCart.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ForSaleHistoryTable.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.nullTransactionNo.resources
-C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.nullTransactionNo2.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.start.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.BrandDelete_SalesTable.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ChangesForStockEntry_User.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UpdateSalechart.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UpdateSaleTB.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.start.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.BrandDelete_SalesTable.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ChangesForStockEntry_User.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UpdateSalechart.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.UpdateSaleTB.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTable.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTableIdentity.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.updatedFK.resources
+C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.EntryChart.resources
