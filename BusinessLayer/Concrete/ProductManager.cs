@@ -12,7 +12,15 @@ namespace BusinessLayer.Concrete
             product.CategoryId = 4;
             base.Update(product);
         }
-        public List<Product> GetAllBl()
+
+		public void DecreaseQuantity(int Quantity, int ProductId)
+		{
+            Product p = GetById(ProductId);
+            p.Quantity = p.Quantity - Quantity;
+            base.Update(p);
+		}
+
+		public List<Product> GetAllBl()
         {
             return base.List();
         }

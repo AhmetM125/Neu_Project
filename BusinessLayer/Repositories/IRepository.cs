@@ -1,29 +1,33 @@
-﻿using System;
+﻿using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace BusinessLayer.Repositories
 {
-    public interface IRepository<T>
+	public interface IRepository<T>
 
-    {
+	{
 
-        /*List<T> JList();*/
-        int Count();
-        void Insert(T p1);
-        List<T> List();
-        void Delete(T p1);
+		/*List<T> JList();*/
+		int Count();
+		
 
-        void DeleteW(Expression<Func<T, bool>> filter);
+		void Insert(T p1);
+		List<T> List();
+		void Delete(T p1);
 
-        T Get(Expression<Func<T, bool>> filter);
+		void DeleteW(Expression<Func<T, bool>> filter);
 
-        void Update(T p1);
+		T Get(Expression<Func<T, bool>> filter);
 
-        List<T> List(Expression<Func<T, bool>> expression);
+		void Update(T p1);
+		
 
-        float GeneralSum();
+		List<T> List(Expression<Func<T, bool>> expression);
+
+		float GeneralSum();
 
 
-    }
+	}
 }

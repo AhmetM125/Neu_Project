@@ -11,7 +11,7 @@ namespace BusinessLayer.Concrete
 	{
 		public int GenerateTransactionNumber()
 		{
-			int TotalSale = base.Count();
+			int TotalSale = base.Count() + 1;
 			string Date = DateTime.Today.ToString("ddMMyyyy");
 			Date += TotalSale.ToString();
 			return Convert.ToInt32(Date);
@@ -21,12 +21,6 @@ namespace BusinessLayer.Concrete
 		{
 			return base.List();
 		}
-
-
-
-
-
-
 		public List<Sale> GetList(int id)
 		{
 			return base.List(x => x.User.UserId == id);
@@ -37,40 +31,33 @@ namespace BusinessLayer.Concrete
 			throw new System.NotImplementedException();
 		}
 
+		public int TotalCount() => base.Count();
+		
 		public void PaymentProcess(Sale sale, int Uid)
 		{
+			sale.UserId = Uid;
 			sale.TransactionNo = GenerateTransactionNumber();
-			sale.SaleDate = DateTime.Today;
+		//	sale.SaleDate = DateTime.Today;
+			
+			var saleItems = NEUComponent.Instance.ChartService.GetAllBl(sale.UserId).ToList();
 
-			var saleItems = NEUComponent.Instance.ChartService.GetAllBl(sale.UserId)
-			.Where(x => x.UserId == sale.UserId)
-			.ToList();
-
-			/*var values = from x in NEUComponent.Instance.ChartService.GetAllBl(sale.UserId)
-						 where x.UserId == sale.UserId
-						 select new
-						 {
-							 ProductID = x.ProductId,
-							 Quantity = x.Quantity
-						 };*/
-
-			foreach (var x in saleItems)
+			foreach (var item in saleItems)
 			{
-				var Pvalue = NEUComponent.Instance.ProductService.GetById(x.ProductId);
-				sale.Price = Pvalue.Price;
-				sale.ProductId = Pvalue.ProductId;
-				sale.Quantity = x.Quantity;
-				sale.UserId = Uid;
+				sale.Price = (float)item.Price;
+				sale.ProductId = item.ProductId;
+				sale.Quantity = item.Quantity;
 				base.Insert(sale);
-				var ChartValue = NEUComponent.Instance.ChartService.GetChartById(sale.UserId);
-				//NEUComponent.Instance.ChartService.Delete(ChartValue);
-
+				NEUComponent.Instance.ProductService.DecreaseQuantity(item.Quantity, item.ProductId);
+				
 			}
+			NEUComponent.Instance.ChartService.ChartDelete(Uid);
 		}
 
 		public void ProductSaleInsert(Sale product)
 		{
 			base.Insert(product);
 		}
+
+		
 	}
 }

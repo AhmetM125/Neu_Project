@@ -6,12 +6,10 @@ namespace EntityLayer.Concrete
 {
 	public class Sale
 	{
-		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[Key]
-		[Column(Order = 1)]
+		public int ChartId { get; set; }
 		public int TransactionNo { get; set; }
-		[Key]
-		[Column(Order = 2)]
+		
 		public int ProductId { get; set; }
 		public virtual Product Product { get; set; }
 

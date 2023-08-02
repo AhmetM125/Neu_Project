@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DataAccessLayer</RootNamespace>
     <AssemblyName>DataAccessLayer</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -89,6 +89,30 @@
     <Compile Include="Migrations\202308011547153_EntryChart.designer.cs">
       <DependentUpon>202308011547153_EntryChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308020753209_SaleTable1.cs" />
+    <Compile Include="Migrations\202308020753209_SaleTable1.designer.cs">
+      <DependentUpon>202308020753209_SaleTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308020839280_n.cs" />
+    <Compile Include="Migrations\202308020839280_n.designer.cs">
+      <DependentUpon>202308020839280_n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308020847415_nn.cs" />
+    <Compile Include="Migrations\202308020847415_nn.designer.cs">
+      <DependentUpon>202308020847415_nn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308021044035_Salet.cs" />
+    <Compile Include="Migrations\202308021044035_Salet.designer.cs">
+      <DependentUpon>202308021044035_Salet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308021146182_SaleIdentity.cs" />
+    <Compile Include="Migrations\202308021146182_SaleIdentity.designer.cs">
+      <DependentUpon>202308021146182_SaleIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308021149449_SaleTable2.cs" />
+    <Compile Include="Migrations\202308021149449_SaleTable2.designer.cs">
+      <DependentUpon>202308021149449_SaleTable2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -129,6 +153,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308011547153_EntryChart.resx">
       <DependentUpon>202308011547153_EntryChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308020753209_SaleTable1.resx">
+      <DependentUpon>202308020753209_SaleTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308020839280_n.resx">
+      <DependentUpon>202308020839280_n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308020847415_nn.resx">
+      <DependentUpon>202308020847415_nn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308021044035_Salet.resx">
+      <DependentUpon>202308021044035_Salet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308021146182_SaleIdentity.resx">
+      <DependentUpon>202308021146182_SaleIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308021149449_SaleTable2.resx">
+      <DependentUpon>202308021149449_SaleTable2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

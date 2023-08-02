@@ -1,20 +1,24 @@
 ﻿@using EntityLayer.Concrete
 @model Product
-@using (Html.BeginForm("ConfirmEntry", "StockEntry", FormMethod.Post))
-{
 
 
 
 
-    @Html.Label("Product Name")
-    @Html.DropDownListFor(x => x.ProducId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
-    <br />
-    @Html.Label("Product Quantity")
-    @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
-    <br />
-    <input type="date" name="Date" class="form-control" />
-    <br />
-    <button class="btn btn-primary" style="width:100%">-></button>
 
 
-}
+
+        @using (Html.BeginForm("ConfirmEntry", "StockEntry", FormMethod.Post))
+        {
+
+            @Html.Label("Product Name")
+            @Html.DropDownListFor(x => x.ProductId, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+            <br />
+            @Html.Label("Product Quantity")
+            @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" })
+            <br />
+            <input type="date" name="Date" class="form-control" />
+            <br />
+            <button class="btn btn-primary" style="width:100%">-></button>
+
+
+        }

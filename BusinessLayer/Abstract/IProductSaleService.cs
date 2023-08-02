@@ -13,5 +13,6 @@ namespace BusinessLayer.Abstract
         void ProductSaleInsert(Sale product);
         int GenerateTransactionNumber();
         void PaymentProcess(Sale sale,int Uid);
+        int TotalCount();
     }
 }

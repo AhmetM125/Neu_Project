@@ -11,7 +11,12 @@
     <div class="row no-gutters">
         <div class="col-md-8">
             <div class="product-details mr-2">
-
+                <h2 style="color:red">
+                    @ViewBag.Error
+                </h2> <br />
+                <h2 style="color:red">
+                    @ViewBag.Chart
+                </h2> <br />
                 <button id="myButton" style="width:20%;margin-right:5px;color:black" class="btn  btn-outline-info" data-toggle="modal" data-target="#Modal1">
                     Search Product
                 </button>
@@ -33,10 +38,11 @@
                 @{
                     int? TotalPrice;
                 }
+
                 @foreach (var item in Model)
                 {
 
-                   
+
                     <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
                         <div class="d-flex flex-row">
                             <img class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVUlqCtI1EqLkv0Tt2MyIo3qdZgJl9aPsn1Q&usqp=CAU" width="40">
@@ -71,11 +77,11 @@
                             <a href="~/Sale/Edit/@item.ProductId" class="btn btn-info">Edit</a>
                         </div>
                     </div>
-                                    }
+                }
             </div>
         </div>
         <div class="col-md-4">
             @Html.Action("Prt_PaymentDetails", "Sale")
-        </div> 
+        </div>
     </div>
 </div>

@@ -2,14 +2,17 @@
 @model List<Sale>
 
 
-
+<br />
 
 <table class="table table-bordered ">
 
     <thead>
-        <tr>
-            <th></th>
-            <th></th>
+        <tr style="text-align:center">
+            <th>Transaction No</th>
+            <th>Product Name</th>
+            <th>Sale Date</th>
+            <th>Quantity</th>
+            <th>Price</th>
             <th></th>
             <th></th>
         </tr>
@@ -18,8 +21,14 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>@item.ProductId</td>
+            <tr style="text-align:center">
+                <td>@item.TransactionNo</td>
+                <td>@item.Product.Name</td>
+                <td>@item.SaleDate</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price</td>
+                <td > <a href="#" class="btn btn-outline-info">Edit</a></td>
+                <td> <a href="#" class="btn btn-outline-danger">Delete</a></td>
             </tr>
         }
     </tbody>

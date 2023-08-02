@@ -23,9 +23,9 @@ namespace BusinessLayer.Concrete
         }
 		public SaleCart GetChartById(int Uid) => base.Get(x => x.UserId == Uid);
 
-		public void DeleteChartProduct(int Pid)
+		public void DeleteChartProduct(int Pid, int Uid)
         {
-            base.DeleteW(x => x.ProductId == Pid);
+            base.DeleteW(x => x.ProductId == Pid && Uid == x.UserId);
         }
 
         public List<SaleCart> GetAllBl(int U_Id)
@@ -59,6 +59,6 @@ namespace BusinessLayer.Concrete
 
         }
 
-       
-    }
+        public SaleCart GetChartById(int Uid, int Pid) => base.Get(x => x.ProductId == Pid && x.UserId == Uid);
+	}
 }

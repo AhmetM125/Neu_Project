@@ -61,3 +61,13 @@ C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\De
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTableIdentity.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.updatedFK.resources
 C:\Users\Ahmet\OneDrive\Masaüstü\NeuProject\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.EntryChart.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTable.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTableIdentity.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.updatedFK.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.EntryChart.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTable1.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.n.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.nn.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Salet.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleIdentity.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTable2.resources

@@ -11,6 +11,7 @@ namespace BusinessLayer.Abstract
         void ProductDelete(Product product);
         void UpdateProduct(Product product);
         void ChangeCategoryNameOfProduct(Product product);
+        void DecreaseQuantity(int Quantity,int ProductId);
 
 	}
 }
