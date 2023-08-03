@@ -113,6 +113,14 @@
     <Compile Include="Migrations\202308021149449_SaleTable2.designer.cs">
       <DependentUpon>202308021149449_SaleTable2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308030823561_n1.cs" />
+    <Compile Include="Migrations\202308030823561_n1.designer.cs">
+      <DependentUpon>202308030823561_n1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202308031110595_StockEntryU.cs" />
+    <Compile Include="Migrations\202308031110595_StockEntryU.designer.cs">
+      <DependentUpon>202308031110595_StockEntryU.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,6 +179,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202308021149449_SaleTable2.resx">
       <DependentUpon>202308021149449_SaleTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308030823561_n1.resx">
+      <DependentUpon>202308030823561_n1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031110595_StockEntryU.resx">
+      <DependentUpon>202308031110595_StockEntryU.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,8 +3,11 @@
     ViewBag.Title = "ProductEntry";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+<br />
+<div style="margin: 0 auto;width:400px" >
 
-<h2>Product Entry</h2>
+    <h2>Product Entry</h2>
+</div>
 <br />
 <div style="display:flex;justify-content:left">
     <div style="width:40%">
@@ -18,7 +21,7 @@
             <img src="https://pngimg.com/d/shopping_cart_PNG17.png" alt="Shopping cart PNG transparent image download, size: 600x568px" style="width:100px;height:80px" />
 
         </div>
-       <br>
+        <br>
         @Html.Action("ChartList", "StockEntry")
 
     </div>

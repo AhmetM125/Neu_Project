@@ -1,0 +1,31 @@
+﻿@using EntityLayer.Concrete
+@model EntryCart
+
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+
+@using (Html.BeginForm("EditProduct", "StockEntry", FormMethod.Post))
+{
+
+    <div style="display:flex" >
+
+    <div style="width:50%;margin: 10% auto">
+        @Html.HiddenFor(x => x.ProductId)
+        @Html.Label("Product Name")
+        <br />
+        @Html.TextBoxFor(x => x.Product.Name, new { @class = "form-control", @readonly = "readonly" })
+        <br />
+        @Html.Label("Quantity")
+        <br />
+        @Html.TextBoxFor(x => x.Quantity, new { @class = "form-control" }) <br />
+
+        <button class="btn btn-outline-info form-control">Confirm</button>
+    </div>
+    </div>
+}

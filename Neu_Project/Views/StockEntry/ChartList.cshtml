@@ -2,28 +2,39 @@
 
 @using EntityLayer.Concrete
 @model List<EntryCart>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Product Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.ProductId</td>
+<a href="~/StockEntry/DeleteChart"  class="btn btn-outline-danger">Delete Chart</a> 
+@using (Html.BeginForm("ConfirmEntry", "StockEntry", FormMethod.Post))
+{
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr style="text-align:center">
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="text-align:center">
+                    <td>@item.Product.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Price</td>
+                    <td> <a href="~/StockEntry/DeleteProduct/@item.ProductId" class="btn btn-outline-danger">Delete</a></td>
+                    <td> <a href="~/StockEntry/EditProduct/@item.ProductId" class="btn btn-outline-info">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
 
-<br />
-<div>
-    <button class="btn btn-primary form-control">Total: 0.0$ Confirm</button>
+    <br />
+    <div>
+        <button class="btn btn-primary form-control">Total: @ViewBag.Total$ Confirm</button>
 
-</div>
+    </div>
+}
 

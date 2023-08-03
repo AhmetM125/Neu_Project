@@ -83,6 +83,7 @@
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="ValidationRules\CategoryValidator.cs" />
     <Compile Include="ValidationRules\ProductValidator.cs" />
+    <Compile Include="ValidationRules\StockEntryValidator.cs" />
     <Compile Include="ValidationRules\UserValidator.cs" />
   </ItemGroup>
   <ItemGroup>

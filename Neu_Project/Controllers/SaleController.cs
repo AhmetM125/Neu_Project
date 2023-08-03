@@ -1,5 +1,7 @@
 ﻿using BusinessLayer;
+using BusinessLayer.ValidationRules;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,7 @@ namespace Neu_Project.Controllers
 			ViewBag.SaleCnt = NEUComponent.Instance.ProductSaleService.TotalCount();
 			return View();
 		}
-		public ActionResult SaleScreen(string data,string data2)
+		public ActionResult SaleScreen(string data, string data2)
 		{
 			ViewBag.Error = data;
 			ViewBag.Chart = data2;
@@ -44,21 +46,22 @@ namespace Neu_Project.Controllers
 		[HttpPost]
 		public ActionResult InsertToBasket(Product p)
 		{
-
-			int uID = (int)Session["U_Id"];
 			int Qnt = p.Quantity;
 			SaleCart SaleCart;
+			StockEntryValidator rules = new StockEntryValidator(p);
+			ValidationResult validationResult = rules.Validate(p);
+
 			p = NEUComponent.Instance.ProductService.GetById(p.ProductId);
-			if (p.Quantity < Qnt || Qnt == 0)
+			if (validationResult.IsValid)
 			{
-				return RedirectToAction("SaleScreen", "Sale", new { data = "Quantity Error" });
+				int uID = (int)Session["U_Id"];
+				p.Quantity = Qnt;
+				SaleCart = NEUComponent.Instance.ChartService.SetProduct(p, uID);
+				NEUComponent.Instance.ChartService.InsertChart(SaleCart);
+				return RedirectToAction("SaleScreen", "Sale");
 			}
-			p.Quantity = Qnt;
-			SaleCart = NEUComponent.Instance.ChartService.SetProduct(p, uID);
-			NEUComponent.Instance.ChartService.InsertChart(SaleCart);
-
-
-			return RedirectToAction("SaleScreen", "Sale");
+			else
+				return RedirectToAction("SaleScreen", "Sale", new { data = "Quantity Error" });
 		}
 
 		public PartialViewResult SalePopup()

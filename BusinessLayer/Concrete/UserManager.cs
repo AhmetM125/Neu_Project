@@ -26,10 +26,6 @@ namespace BusinessLayer.Concrete
 
 
         public User Login(string username, string password) => base.Get(x => x.Username == username && x.Password == password);
-      /*  {
-            var user = base.Get(x => x.Username == username && x.Password == password);
-            return user;
-        }*/
 
         public void UserAddBl(User user)
         {

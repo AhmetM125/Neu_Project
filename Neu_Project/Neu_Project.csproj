@@ -2424,12 +2424,12 @@
     <Content Include="Views\Sale\SalePopup.cshtml" />
     <Content Include="Views\StockEntry\TransactionEntry.cshtml" />
     <Content Include="Views\Sale\Prt_PaymentDetails.cshtml" />
-    <Content Include="Views\StockEntry\PList.cshtml" />
     <Content Include="Views\StockEntry\Index.cshtml" />
     <Content Include="Views\StockEntry\ProductEntryP.cshtml" />
     <Content Include="Views\Report\SaleList.cshtml" />
     <Content Include="Views\Report\StockEntryList.cshtml" />
     <Content Include="Views\StockEntry\ChartList.cshtml" />
+    <Content Include="Views\StockEntry\EditProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

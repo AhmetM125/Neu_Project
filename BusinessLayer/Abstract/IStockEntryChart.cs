@@ -1,15 +1,15 @@
 ﻿using BusinessLayer.Repositories;
 using EntityLayer.Concrete;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
 	public interface IStockEntryChart : IRepository<EntryCart>
 	{
-		List<EntryCart> GetAllChart();
+		List<EntryCart> GetAllChart(int UserId);
+		bool InsertToBasket(Product p, int Uid, int Quantity);
+		float CalculateTotal(int Uid);
+		void DeleteEntryChart(int Uid);
+
 	}
 }

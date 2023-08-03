@@ -7,7 +7,7 @@ namespace EntityLayer.Concrete
 	public class Sale
 	{
 		[Key]
-		public int ChartId { get; set; }
+		public int SaleId { get; set; } // change the name 
 		public int TransactionNo { get; set; }
 		
 		public int ProductId { get; set; }

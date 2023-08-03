@@ -11,8 +11,6 @@ namespace BusinessLayer.Abstract
    public interface IStockEntry : IRepository<StockEntry>
     {
         List<StockEntry> GetAllBl();
-       /* StockEntry GetById(int id);*//*
-        void CategoryDelete(Category category);
-        void UpdateCategory(Category category);*/
+        void ConfirmEntry(int Uid);
     }
 }

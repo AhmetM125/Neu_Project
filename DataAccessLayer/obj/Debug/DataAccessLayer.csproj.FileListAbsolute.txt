@@ -71,3 +71,5 @@ C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\D
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Salet.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleIdentity.resources
 C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.SaleTable2.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.n1.resources
+C:\Users\ahmet.yurdal\Desktop\Project Learning\Neu_Project\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.StockEntryU.resources

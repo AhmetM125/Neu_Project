@@ -13,6 +13,8 @@ namespace EntityLayer.Concrete
 		[Key]
 		[Column(Order = 0)]
 		public int ChartId { get; set; }
+
+
         //FK
         public int UserId { get; set; }
         public virtual User User { get; set; }

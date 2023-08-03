@@ -11,7 +11,7 @@ namespace BusinessLayer.Concrete
         {
             throw new System.NotImplementedException();
         }
-
+      
         public void ChartDelete(int Uid)
         {
             base.DeleteW(x=>x.UserId==Uid);
