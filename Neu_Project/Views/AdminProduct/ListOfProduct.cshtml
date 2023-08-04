@@ -22,14 +22,14 @@
 <table class="table table-bordered" style="text-align:center">
 
     <tr>
-        
+
         <th> Category Name</th>
         <th>Product Name</th>
         <th>Quantity</th>
         <th>Price</th>
         <th>Description</th>
         <th>Update</th>
-        <th>Delete</th>
+        @*   <th>Delete</th>*@
     </tr>
     @foreach (var item in Model)
     {
@@ -42,9 +42,9 @@
             <td>@item.Price</td>
             <td>@item.Description</td>
             <td> <a href="~/AdminProduct/UpdateProduct/@item.ProductId" style="width:60%" class="btn btn-info">Update</a> </td>
-            <td> <a href="~/AdminProduct/DeleteProduct/@item.ProductId" style="width: 60%" class="btn btn-danger">Delete</a> </td>
+            @* <td> <a href="~/AdminProduct/DeleteProduct/@item.ProductId" style="width: 60%" class="btn btn-danger">Delete</a> </td>*@
         </tr>
-       
+
     }
 
 </table>

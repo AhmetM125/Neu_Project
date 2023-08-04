@@ -20,6 +20,7 @@ namespace BusinessLayer.Repositories
 			_context.SaveChanges();
 
 		}
+
 		public void DeleteW(Expression<Func<T, bool>> filter)
 		{
 			var Deleting = _context.Set<T>().Where(filter);

@@ -13,7 +13,7 @@
                 <th>Quantity</th>
                 <th>Price</th>
                 <th></th>
-                <th></th>
+                @*<th></th>*@
             </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@
                     <td>@item.Quantity</td>
                     <td>@item.Price</td>
                     <td> <a href="~/StockEntry/DeleteProduct/@item.ProductId" class="btn btn-outline-danger">Delete</a></td>
-                    <td> <a href="~/StockEntry/EditProduct/@item.ProductId" class="btn btn-outline-info">Edit</a></td>
+                 @*   <td> <a href="~/StockEntry/EditProduct/@item.ProductId" class="btn btn-outline-info">Edit</a></td>*@
                 </tr>
             }
         </tbody>

@@ -14,7 +14,7 @@
             <th>Quantity</th>
             <th>Price</th>
             <th></th>
-            <th></th>
+            @*<th></th>*@
         </tr>
 
     </thead>
@@ -27,8 +27,8 @@
                 <td>@item.SaleDate</td>
                 <td>@item.Quantity</td>
                 <td>@item.Price</td>
-                <td > <a href="#" class="btn btn-outline-info">Edit</a></td>
-                <td> <a href="#" class="btn btn-outline-danger">Delete</a></td>
+             @*   <td > <a href="~/Report/SaleEdit/@item.SaleId" class="btn btn-outline-info">Edit</a></td>*@
+                <td> <a href="~/Report/SaleRemove/@item.SaleId" class="btn btn-outline-danger">Delete</a></td>
             </tr>
         }
     </tbody>

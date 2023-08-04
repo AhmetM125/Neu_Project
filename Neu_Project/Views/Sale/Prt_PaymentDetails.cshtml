@@ -9,9 +9,9 @@
     @using (Html.BeginForm("ConfirmPayment", "Sale", FormMethod.Post))
     {
 
-        <label class="credit-card-label">Name Surname</label>
+        @*<label class="credit-card-label">Name Surname</label>
 
-        @Html.DropDownListFor(x => x.UserId, (List<SelectListItem>)ViewBag.PaymentNS, new { @class = "form-control" })
+        @Html.DropDownListFor(x => x.UserId, (List<SelectListItem>)ViewBag.PaymentNS, new { @class = "form-control" })*@
 
 
         <div>
@@ -26,7 +26,7 @@
             </div>
             <div class="col-md-6">
                 <label class="credit-card-label">Remain</label>
-                <input type="text" class="form-control credit-inputs" placeholder="$0.0">
+                <input type="text" class="form-control credit-inputs" placeholder="@ViewData["TotalPrice"]$">
             </div>
         </div>
         

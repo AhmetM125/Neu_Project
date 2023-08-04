@@ -10,11 +10,11 @@
     <thead>
         <tr style="text-align:center">
             <th>Transaction No</th>
-            <th>Product Name</th>
+            <th>Product Id</th>
             <th>Sale Date</th>
             <th>Quantity</th>
             <th>Price</th>
-            <th></th>
+            <th>User Name</th>
             <th></th>
         </tr>
 
@@ -24,13 +24,13 @@
         {
             <tr style="text-align:center">
                 <td>@item.TransactionNo</td>
-                <td>@item.Product.Name</td>
+                <td>@item.ProducId</td>
                 <td>@item.Date </td>
                 <td>@item.Quantity</td>
                 <td>@item.Price</td>
                 <td>@item.User.Name</td>
-                <td> <a href="#" class="btn btn-outline-info">Edit</a></td>
-                <td> <a href="#" class="btn btn-outline-danger">Delete</a></td>
+               @* <td> <a href="#" class="btn btn-outline-info">Edit</a></td>*@
+                <td> <a href="~/Report/EntryRemove/@item.EntryId" class="btn btn-outline-danger">Delete</a></td>
             </tr>
         }
     </tbody>
